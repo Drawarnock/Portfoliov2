@@ -31,7 +31,7 @@ gulp.task('sass', function() {
             .pipe(sass().on('error', sass.logError))
             .pipe(autoprefixer({browsers: ['last 10 versions']}))
             .pipe(sourcemaps.write())
-            .pipe(gulp.dest('src/css/'))
+            .pipe(gulp.dest('src/css'))
             .pipe(browserSync.stream());
 });
 
