@@ -9,13 +9,16 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext" rel="stylesheet">
     <link href="css/fontello.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/particles.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
+        <div class="triangle"></div>
+        <div id="particles-js"></div>
         <header class="home" id="home">
                 <nav class="navigation">
                     <div class="navigation__inner">
-                        <div class="navigation__logo-container"><a class="navigation__logo" href="#home">Konrad Wisłocki</a></div>
+                        <div class="navigation__logo-container"><a class="navigation__logo" href="#home">KW</a></div>
                         <ul class="navigation__list">
                             <li class="navigation__item"><a class="navigation__link" href="#about"><span>O</span> MNIE</a></li>
                             <li class="navigation__item"><a class="navigation__link" href="#projects"><span>P</span>ROJEKTY</a></li>
@@ -279,6 +282,9 @@
             <div class="footer__credits"><a class="footer__link" href="http://www.freepik.com">Designed by Starline / Freepik</a></div>
         </footer>
     </div>
+    <script>
+        particlesJS.load('particles-js', 'particles.json');
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
