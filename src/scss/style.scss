@@ -12,24 +12,37 @@
 
 .triangle {
     position: absolute;
-    left: 300px;
-    width:100px;
+    left: 20vw;
+    width:0;
     height:0;
     border: 0 solid transparent;
     border-left-width: 200px;
     border-bottom-width: 50vh;
     border-top-width: 50vh;
-    border-left: 400px solid white;
+    border-left: 28vw solid white;
     filter: drop-shadow(8px 0px 5px rgba(0,0,0, 0.15));
 }
 
 #particles-js {
     position: absolute;
     top:0;
-    left:300px;
+    left:20vw;
     right:0;
     bottom:0;
     z-index: -1;
+}
+
+.underscore {
+    height: 4px;
+    width:80px;
+    margin: 10px auto 0;
+    
+    &--black {
+        background-color: black;
+    }
+    &--bright {
+        background-color: #cdcdcd;
+    }
 }
 
 .home {
@@ -40,11 +53,11 @@
     &__title {
         position: absolute;
         top:50%;
-        left:20%;
+        left:21%;
         transform: translate(-50%,-50%);
         font-weight: bold;
         color: rgb(38, 38, 38);
-        font-size: 48px;
+        font-size: 4vw;
         text-align: center;
         text-shadow: 1px 1px 2px #323232;
     }
@@ -55,10 +68,26 @@
 
     &__btn {
         position: absolute;
-        top: 70%;
-        left:20%;
+        top: 65%;
+        left:18%;
         transform: translate(-50%,-50%);
+        color: rgb(38,38,38);
+        animation: jump 3s infinite;
+        transition: all .5s ease-out;
+        .icon-down-open:before {
+            font-size: 40px;
+            margin:0;
+        }
+        &:hover {
+          color: #228078;
+        }
     }
+}
+
+@keyframes jump {
+    0% { transform:translateY(-50%); }
+    50% { transform:translateY(-30%); }
+    100% { transform:translateY(-50%); }
 }
 
 .navigation {
@@ -207,10 +236,11 @@ body.navigation--active {
         display: flex;
         margin: 100px auto 50px;
         width: 100%;
+        flex-direction: column;
     }
 
     &__who {
-        width: 50%;
+        width: 100%;
         flex: 1 1 50%;
         display: flex;
         justify-content: center;
@@ -239,10 +269,11 @@ body.navigation--active {
     }
 
     &__skills {
-        width:50%;
+        width:100%;
         flex: 1 1 50%;
         display: flex;
         justify-content: center;
+        height: 700px;
     }
 
     &__fixed {
@@ -396,7 +427,7 @@ section::after {
 .projects {
     position: relative;
     background-color: white;
-    padding: 6em 10px 50px 10px;
+    padding: 6em 0 50px;
     min-height: 100vh;
     z-index: 1;
     
@@ -424,7 +455,7 @@ section::after {
 }
 
 .gallery {
-    max-width: 1200px;
+    max-width:1200px;
     margin: 100px auto;
     display: flex;
     flex-wrap: wrap;
@@ -542,13 +573,13 @@ svg#bigTriangleColor {
     position: relative;
     &__container {
         margin: 50px auto;
-        width: 600px;
+        width: 95%;
         text-align: center;
     }
     &__info {
         color:#cdcdcd;
-        font-size: 20px;
-        
+        font-size: 16px;
+        line-height: 1.5em;
     }
     svg {
         position: absolute;
@@ -562,13 +593,13 @@ svg#bigTriangleColor {
     &__input, &__message {
         display: block;
         margin: 30px auto;
-        width: 500px;
+        width: 95%;
         padding: 15px;
         border: 1px solid transparent;
         background-color: #1E242C;
         outline: none;
         color:#cdcdcd;
-        font-size: 18px;
+        font-size: 16px;
          border-radius: 3px;
         transition: all .4s ease-out;
         &:hover {
@@ -588,7 +619,7 @@ svg#bigTriangleColor {
     }
 
     &__submit {
-        width: 200px;
+        width: 60%;
         display: block;
         margin: 30px auto 10px;
         border: 1px solid white;
@@ -607,7 +638,7 @@ svg#bigTriangleColor {
 
 .socials {
     display: flex;
-    width: 33.3333332%;
+    width: 100%;
     justify-content: center;
     &__icon {
         overflow: hidden;
@@ -642,24 +673,28 @@ svg#bigTriangleColor {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
 
     &__copyright {
-        width: 33.3333332%;
+        width:100%;
         color:#cdcdcd;
         font-size: 20px;
         font-weight: bold;
-        margin: auto;
+        margin: 20px auto;
         text-align: center;
     }
+
     &__credits {
-        width: 33.3333332%;
+        width:100%;
         margin: auto;
         text-align: center;
     }
 
     &__link {
         color:#cdcdcd;
+        display: block;
         text-decoration: none;
+        margin: 20px auto;
         &:hover {
             text-decoration: underline;
         }
@@ -670,12 +705,10 @@ svg#bigTriangleColor {
     font-size: 24px;
     color:#cdcdcd;
     margin:0;
-    
 } 
 
 .icon-facebook:before {padding:13px 18px; }
 .icon-github-circled:before, .icon-linkedin:before { padding:13px 15px; }
-
 
 @keyframes topToBottom {
     0% {
@@ -701,6 +734,34 @@ svg#bigTriangleColor {
 
 @media (min-width: 576px) {
 
+    .underscore {
+        width: 100px;
+    }
+
+    .form {
+        &__input, &__message {
+            width:500px;
+            font-size: 18px;
+       }
+
+       &__submit { 
+        width:200px;
+       }
+    }
+
+    .section__title {
+        font-size: 60px;
+    }
+
+    .contact {
+        &__container {
+            width:550px;
+        }
+
+        &__info {
+            font-size: 20px;
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -711,10 +772,43 @@ svg#bigTriangleColor {
     .navigation__item {
         display: block;
     }
+
+    .socials {
+        width: 33.3333332%;
+    }
+
+    .footer {
+        flex-direction: row;
+        &__copyright {
+            width: 33.3333332%;
+            margin: 0 auto;
+            
+        }
+
+        &__credits {
+            width: 33.3333332%;
+        }
+    
+        &__link {
+            margin: 0 auto;
+        }
+    }
 }
 
 @media (min-width: 992px) {
+    .about {
+        &__container {
+            flex-direction: row;
+        }
 
+        &__who {
+            width:50%
+        }
+
+        &__skills {
+            width:50%
+        }
+    }
 }
 
 @media (min-width: 1200px) {

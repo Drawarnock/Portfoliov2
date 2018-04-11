@@ -21,7 +21,7 @@
             "enable": true,
             "distance": 180,
             "color": "#6c6c6c",
-            "opacity": 0.6,
+            "opacity": 1,
             "width": 1
         },
 
