@@ -62,10 +62,6 @@
         text-shadow: 1px 1px 2px #323232;
     }
 
-    &__desc {
-
-    }
-
     &__btn {
         position: absolute;
         top: 65%;
@@ -93,18 +89,9 @@
 .navigation {
     padding: 10px;
     transition: cubic-bezier(.77,0,.175,1); //all .25s linear;
-    //position: fixed;
-    // top:0;
-    // left:0;
-    // right: 0;
-    //z-index: 50;
-    
-    
-    &--sticky {
-        box-shadow: 0px 1px 5px 1px #323232;
-        padding-top: 0;
-        background-color: rgba(255,255,255,0.8);
-    }
+    transition: all .4s ease;
+
+
 
     &__inner {
         display: flex;
@@ -155,18 +142,19 @@
     }
 
     &__toggle {
-        height: 40px;
-        width: 40px;
+        height: 35px;
+        width: 35px;
         cursor: pointer;
         position: relative;
         padding-top: 10px;
+        border: 1px solid red;
     }
 
     &__bar {
-		height: 3px;
+		height: 2px;
 		display: block;
 		background-color:rgb(38,38,38);
-		margin-bottom: 5px;
+		margin-bottom: 4px;
         transition: transform .2s ease, background-color .5s ease;
         
         &--full {
@@ -225,7 +213,6 @@ body.navigation--active {
     }
 }
 
-
 .about {
     min-height: 100vh;
     padding: 100px 10px;
@@ -246,7 +233,6 @@ body.navigation--active {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        
     }
 
     &__paragraph {
@@ -273,90 +259,84 @@ body.navigation--active {
         flex: 1 1 50%;
         display: flex;
         justify-content: center;
-        height: 700px;
+        height: 950px;
     }
 
     &__fixed {
         position: relative;
-        width:500px;
+        width:270px;
     }
 
     &__item {
         position: absolute;
-
         &--1 {
             top: 50px;
-            left: 100px;
+            left: 20px;
         }
 
         &--2 {
             top: 110px;
-            left: 210px;
+            left: 130px;
         }
 
         &--3 {
-            top: 50px;
-            left: 320px;
+            top: 177px;
+            left: 20px;
         }
 
         &--4 {
-            top: 177px;
-            left: 100px;
+            top: 237px;
+            left: 130px;
         }
 
         &--5 {
-            top: 237px;
-            left: 210px;
+            top: 304px;
+            left: 20px;
         }
 
         &--6 {
-            top: 177px;
-            left: 320px;
+            top: 364px;
+            left: 130px;
         }
 
         &--7 {
-            top: 304px;
-            left: 100px;
+            top: 431px;
+            left: 20px;
         }
 
         &--8 {
-            top: 364px;
-            left: 210px;
+            top: 491px;
+            left: 130px;
         }
 
         &--9 {
-            top: 304px;
-            left: 320px;
+            top: 558px;
+            left: 20px;
         }
 
         &--10 {
-            top: 431px;
-            left: 100px;
+            top: 618px;
+            left: 130px;
         }
 
         &--11 {
-            top: 491px;
-            left: 210px;
+            top: 685px;
+            left: 20px;
         }
 
         &--12 {
-            top: 431px;
-            left: 320px;
+            top: 745px;
+            left: 130px;
         }
 
         &--13 {
-            top: 558px;
-            left: 100px;
-        }
-
-        &--14 {
-            top: 618px;
-            left: 210px;
+            top: 812px;
+            left: 20px;
         }
 
         &--15 {
-            top: 558px;
-            left: 320px;
+            top: 872px;
+            left: 130px;
         }
     }
 
@@ -402,7 +382,6 @@ body.navigation--active {
             background-color: inherit;
             left: 17.5736px;
             box-shadow: 0 0 15px rgba(0,0,0,0.65);
-            
         }
         &:before {
             top: -42.4264px;
@@ -505,7 +484,6 @@ section::after {
         font-weight: bold;
         display: block;
         text-align: center;
-        
     }
 
     &__description {
@@ -532,15 +510,15 @@ section::after {
         font-size: 20px;
         transition: all .25s cubic-bezier(0.5, 0.31, 0.84, 0.05);
             
-            .icon-github-circled:before, .icon-eye:before, .icon-plus:before {
-                color: black;
-                padding:0;
-                font-size: 32px;
+        .icon-github-circled:before, .icon-eye:before, .icon-plus:before {
+            color: black;
+            padding:0;
+            font-size: 32px;
                 
-            }
-            &:hover {
-                transform:scale(1.5);
-            }
+        }
+        &:hover {
+            transform:scale(1.5);
+        }
     }
 
     &__overlay {
@@ -641,6 +619,7 @@ svg#bigTriangleColor {
     width: 100%;
     justify-content: center;
     &__icon {
+        display: block;
         overflow: hidden;
         margin: 0 10px;
         width: 50px;
@@ -652,7 +631,6 @@ svg#bigTriangleColor {
             .icon-facebook:before, .icon-github-circled:before, .icon-linkedin:before { 
                 animation: topToBottom 0.6s forwards;
             }
-           
         }
         &--fb:hover {
             background-color: #4267B2;
@@ -732,11 +710,99 @@ svg#bigTriangleColor {
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 420px) {
 
-    .underscore {
-        width: 100px;
+    .about {
+        &__skills {
+            height: 700px;
+        }
+        &__fixed {
+            width:380px;
+        }
+        &__item {
+            &--1 {
+                top: 50px;
+                left: 20px;
+            }
+        
+            &--2 {
+                top: 110px;
+                left: 130px;
+            }
+        
+            &--3 {
+                top: 50px;
+                left: 240px;
+            }
+        
+            &--4 {
+                top: 177px;
+                left: 20px;
+            }
+        
+            &--5 {
+                top: 237px;
+                left: 130px;
+            }
+        
+            &--6 {
+                top: 177px;
+                left: 240px;
+            }
+        
+            &--7 {
+                top: 304px;
+                left: 20px;
+            }
+        
+            &--8 {
+                top: 364px;
+                left: 130px;
+            }
+        
+            &--9 {
+                top: 304px;
+                left: 240px;
+            }
+        
+            &--10 {
+                top: 431px;
+                left: 20px;
+            }
+        
+            &--11 {
+                top: 491px;
+                left: 130px;
+            }
+        
+            &--12 {
+                top: 431px;
+                left: 240px;
+            }
+        
+            &--13 {
+                top: 558px;
+                left: 20px;
+            }
+        
+            &--14 {
+                top: 618px;
+                left: 130px;
+            }
+        
+            &--15 {
+                top: 558px;
+                left: 240px;
+            }
+        }
     }
+}
+
+@media (min-width: 576px) {
+    .navigation { padding: 20px; }
+    .navigation__toggle { display: none; }
+    .navigation__item { display: block; }
+    .underscore { width: 100px; }
 
     .form {
         &__input, &__message {
@@ -765,52 +831,33 @@ svg#bigTriangleColor {
 }
 
 @media only screen and (min-width: 768px) {
-    .navigation__toggle {
-        display: none;
-    }
-
-    .navigation__item {
-        display: block;
-    }
-
-    .socials {
-        width: 33.3333332%;
-    }
-
+    .socials { width: 33.3333332%; }
     .footer {
         flex-direction: row;
         &__copyright {
             width: 33.3333332%;
             margin: 0 auto;
-            
         }
-
-        &__credits {
-            width: 33.3333332%;
-        }
-    
-        &__link {
-            margin: 0 auto;
-        }
+        &__credits { width: 33.3333332%; }
+        &__link { margin: 0 auto; }
     }
 }
 
 @media (min-width: 992px) {
     .about {
-        &__container {
-            flex-direction: row;
-        }
-
-        &__who {
-            width:50%
-        }
-
-        &__skills {
-            width:50%
-        }
+        &__container { flex-direction: row; }
+        &__who { width:50%; }
+        &__skills { width:50%; }
     }
 }
 
-@media (min-width: 1200px) {
-
+.navigation--sticky {
+    padding: 10px;
+    box-shadow: 0px 1px 5px 1px #323232;
+    background-color: rgba(255,255,255,0.8);
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 200;
 }

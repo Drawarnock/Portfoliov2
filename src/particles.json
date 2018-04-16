@@ -1,7 +1,11 @@
 {
     "particles": {
         "number": {
-            "value": 140
+            "value": 140,
+            "density": {
+                "enable": true,
+                "value_area": 800
+      }
         },
         "color": {
             "value": ["#6c6c6c", "#999999"]
@@ -14,14 +18,15 @@
             "random": true,
             "anim": {
                 "enable": true,
-                "speed": 1
+                "speed": 1,
+                "size_min": 1
             }
         },
         "line_linked": {
             "enable": true,
-            "distance": 180,
+            "distance": 150,
             "color": "#6c6c6c",
-            "opacity": 1,
+            "opacity": 0.9,
             "width": 1
         },
 
