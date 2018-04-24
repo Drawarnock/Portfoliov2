@@ -601,7 +601,6 @@ section::after {
         background-color: white;
         opacity: 0;
         transition: all .3s ease-in-out;
-        
     }
 }
 
@@ -642,6 +641,42 @@ svg#bigTriangleColor {
         top:0;
         left:0;
         right:0;
+    }
+
+    &__modal {
+        border: 1px solid transparent;
+        position: absolute;
+        background-color: #1E242C;
+        z-index: 10;
+        border-radius: 5px;
+        opacity: 0;
+        border: 5px solid white;
+        display: none;
+        &--active {
+            display: flex;
+            justify-content: center;
+            align-items:Center;
+            animation: modalanim 6s ease-out 1 forwards;
+        }
+    }
+
+    &__messages {
+        text-align: center;
+        padding: 20px;
+        
+        &--error {
+            color:red;
+        }
+        &--success {
+            color:green;
+        }
+    }
+
+    &__message {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        padding: 15px;
     }
 }
 
@@ -765,8 +800,10 @@ svg#bigTriangleColor {
     font-size: 24px;
     color:#cdcdcd;
     margin:0;
-} 
+}
 
+.icon-cancel-circled:before { color:red; font-size: 60px; }
+.icon-ok-circled:before { color:green; font-size: 60px; }
 .icon-facebook:before {padding:13px 18px; }
 .icon-github-circled:before, .icon-linkedin:before { padding:13px 15px; }
 
@@ -974,4 +1011,26 @@ svg#bigTriangleColor {
         transform: perspective(400px) rotateZ(90deg);
         opacity: 1;
     }
+}
+
+@keyframes modalanim {
+    0% {
+        transform: translateY(-50%);
+        opacity:0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity:1;
+    }
+
+    90% {
+        transform: translateY(0);
+        opacity:1;
+    }
+    100% {
+        transform: translateY(-50%);
+        opacity:0;
+    }
+
 }

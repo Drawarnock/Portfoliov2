@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
     <title>Konrad Wisłocki - Front-End Developer</title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;subset=latin-ext" rel="stylesheet">
-    <link href="css/fontello.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="js/particles.min.js"></script>
+    <link href="css/fontello.css?t=14" rel="stylesheet">
+    <link href="css/style.css?t=13" rel="stylesheet">
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/particles.min.js?=12"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117958165-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-117958165-1');
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -43,7 +55,7 @@
                     <img src="img/kw.png" alt="">
                     <div class="about__desc">
                         <p class="about__paragraph">Cześć nazywam się Konrad Wisłocki.</p>
-                        <p class="about__paragraph2">Aktualnie mieszkam w Krakowie, gdzie poszukuję pracy/stażu jako Front-End Developer/JavaScript Developer. Staram się aby mój kod były czysty i przejrzysty oraz najprostszy jak się da. Jestem perfekcjonistą i raczej nie stosuje połśrodków, kieruje się dewizą - "wszystko jest do zrobienia" potrzebny jest jedynie czas i oczywiście odpowiednie umiejętności. Obecnie skupiam się na nauce React.js i to właśnie w tym kierunku chciałbym się najbardziej rozwijać, ale nie wykluczam rozwoju także w innych frontendowych technologiach tj. Angular czy Vue.</p>
+                        <p class="about__paragraph2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus, ante id ultricies euismod, risus tellus efficitur felis, sed feugiat tortor ante quis arcu. Nunc ac vulputate metus. Duis sed nunc tellus. Integer nec velit ac dui rhoncus fringilla eu a eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec iaculis, sapien ac egestas gravida, tellus massa lacinia nisl, ut commodo elit massa eu justo. Praesent consectetur at arcu ut sagittis. Nunc vel ullamcorper nisi.Curabitur dapibus sit amet velit vel pharetra. Etiam velit justo, interdum nec lorem et, mattis ornare velit. Donec eu ultricies est.</p>
                     </div>
                 </div>
                 <div class="about__skills">
@@ -152,7 +164,7 @@
                             <a class="gallery__control gallery__control--more" href="">
                                 <i class="icon-plus"></i>
                             </a>
-                            <a class="gallery__control gallery__control--live" href="">
+                            <a class="gallery__control gallery__control--live" href="/challenge1">
                                 <i class="icon-eye"></i>
                             </a>
                         </div>
@@ -171,7 +183,7 @@
                             <a class="gallery__control gallery__control--more" href="">
                                 <i class="icon-plus"></i>
                             </a>
-                            <a class="gallery__control gallery__control--live" href="">
+                            <a class="gallery__control gallery__control--live" href="/challenge2">
                                 <i class="icon-eye"></i>
                             </a>
                         </div>
@@ -263,12 +275,16 @@
             <div class="contact__container">
                 <span class="contact__info">Chciałbyś mnie o coś zapytać lub masz ofertę współpracy? Zapraszam do kontaktu!</span>
             </div>
-            <form class="form">
-                <input class="form__input" type="text" placeholder="imię i nazwisko">
-                <input class="form__input" type="text" placeholder="adres e-mail">
-                <textarea class="form__message" placeholder="wiadomość..."></textarea>
+            <form class="form" action="contact.php" method="post" >
+                <input name="name" class="form__input" type="text" placeholder="imię i nazwisko">
+                <input name="email" class="form__input" type="text" placeholder="adres e-mail">
+                <textarea name="message" class="form__message" placeholder="wiadomość..."></textarea>
                 <input class="form__submit" type="submit" value="wyślij">
             </form>
+            <div class="contact__modal">
+                <div class="contact__messages"></div>
+            </div>
+            
         </section>
         <footer class="footer">
             <div class="footer__copyright">Konrad Wisłocki &copy; 2018</div>
@@ -280,6 +296,6 @@
             <div class="footer__credits"><a class="footer__link" target="_blank" href="http://www.freepik.com">Designed by Creative_hat / Freepik</a></div>
         </footer>
     </div>
-    <script src="js/main.js"></script>
+    <script src="js/main.js?=10"></script>
 </body>
 </html>
