@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="pragma" content="no-cache" />
     <title>Konrad Wisłocki - Front-End Developer</title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext" rel="stylesheet">
@@ -38,15 +34,15 @@
                             <li class="navigation__item"><a class="navigation__link" href="#projects"><span>P</span>ROJEKTY</a></li>
                             <li class="navigation__item"><a class="navigation__link" href="#contact"><span>K</span>ONTAKT</a></li>
                         </ul>
-                        <div class="navigation__toggle">
+                        <button class="navigation__toggle">
                             <span class="navigation__bar navigation__bar--left-half"></span>
                             <span class="navigation__bar navigation__bar--full"></span>
                             <span class="navigation__bar navigation__bar--right-half"></span>
-                        </div>
+                        </button>
                     </div>
                 </nav>
                 <div class="home__title">Konrad Wisłocki <br>Front-End Developer</div>
-                <a class="home__btn" href="#about"><i class="icon-down-open"></i></i></a>
+                <a class="home__btn" href="#about"><i class="icon-down-open"></i></a>
         </header>
         <section class="about" id="about">
             <h2 class="section__title">O mnie</h2>
@@ -54,8 +50,8 @@
                 <div class="about__who">
                     <img src="img/kw.png" alt="">
                     <div class="about__desc">
-                        <p class="about__paragraph">Cześć nazywam się Konrad Wisłocki.</p>
-                        <p class="about__paragraph2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dapibus, ante id ultricies euismod, risus tellus efficitur felis, sed feugiat tortor ante quis arcu. Nunc ac vulputate metus. Duis sed nunc tellus. Integer nec velit ac dui rhoncus fringilla eu a eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec iaculis, sapien ac egestas gravida, tellus massa lacinia nisl, ut commodo elit massa eu justo. Praesent consectetur at arcu ut sagittis. Nunc vel ullamcorper nisi.Curabitur dapibus sit amet velit vel pharetra. Etiam velit justo, interdum nec lorem et, mattis ornare velit. Donec eu ultricies est.</p>
+                        <h2 class="about__subtitle"><b>Cześć nazywam się Konrad Wisłocki.</b></h2>
+                        <p class="about__paragraph">Aktualnie mieszkam w Krakowie, gdzie poszukuję pracy jako junior Front-End developer. Posiadam tytuł inżyniera elektryka, jednak swoją przyszłośc postanowiłem związać z programowaniem. Pierwszą styczność z programowaniem miałem w liceum gdzie uczyłem się Turbopascala oraz C++. Popularną "webówką" interesuję się od niedawna. W listopadzie ubiegłego roku przystąpiłem do projektu unijnego, w którym odbyłem 120-godzinne szkolenie z zakresu frontendu oraz 3-miesięczny staż. W mniejszym lub większym stopniu znam: HTML5, CSS3/SCSS, JS(ES6), jQuery, React, MySQL, Gulp, Bootstrap, PHP, GIT. W tym momencie najbardziej chcę się rozwijać w tworzeniu aplikacji internetowych w React.js oraz aplikacji mobilnych z wykorzystaniem React Native. Staram się aby mój kod był czysty i naprostszy jak się da, ponieważ wiem, że nawet jeśli apliacja potencjalnie działa a przypomina spaghetti to rozwijanie takiego produktu w przyszłości będzie sprawiać duże problemy.</p>
                     </div>
                 </div>
                 <div class="about__skills">
@@ -154,11 +150,11 @@
                 <div class="gallery__item gallery__item--1">
                     <div class="gallery__overlay">
                         <div class="gallery__text">
-                            <span class="gallery__title">Title</span>
-                            <span class="gallery__description">Description</span>
+                            <span class="gallery__title">Weekly Web Dev Challenge 1</span>
+                            <span class="gallery__description">PSD do HTML, HTML, CSS, PHP</span>
                         </div>
                         <div class="gallery__controls">
-                            <a class="gallery__control" href="">
+                            <a class="gallery__control" href="https://github.com/Drawarnock/WWDC1" target="_blank">
                                 <i class="icon-github-circled"></i>
                             </a>
                             <a class="gallery__control gallery__control--more" href="">
@@ -173,11 +169,30 @@
                 <div class="gallery__item gallery__item--2">
                     <div class="gallery__overlay">
                         <div class="gallery__text">
-                            <span class="gallery__title">Title</span>
-                            <span class="gallery__description">Description</span>
+                            <span class="gallery__title">Portfolio wersja 1</span>
+                            <span class="gallery__description">HTML, CSS, JS</span>
                         </div>
                         <div class="gallery__controls">
-                            <a class="gallery__control gallery__control--github" href="">
+                            <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/portfolio">
+                                <i class="icon-github-circled"></i>
+                            </a>
+                            <a class="gallery__control gallery__control--more" href="">
+                                <i class="icon-plus"></i>
+                            </a>
+                            <a class="gallery__control gallery__control--live" href="">
+                                <i class="icon-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--3">
+                    <div class="gallery__overlay">
+                        <div class="gallery__text">
+                            <span class="gallery__title">Weekly Web Dev Challenge 2</span>
+                            <span class="gallery__description">PSD do HTML, HTML, CSS, JS(jQuery), PHP</span>
+                        </div>
+                        <div class="gallery__controls">
+                            <a class="gallery__control gallery__control--github" href="https://github.com/Drawarnock/WWDC2">
                                 <i class="icon-github-circled"></i>
                             </a>
                             <a class="gallery__control gallery__control--more" href="">
@@ -187,35 +202,92 @@
                                 <i class="icon-eye"></i>
                             </a>
                         </div>
-                    </div>
-                </div>
-                <div class="gallery__item">
-                    <div class="gallery__overlay">
-                        <div class="gallery__text">
-                            <span class="gallery__title">Title</span>
-                            <span class="gallery__description">Description</span>
-                        </div>
-                        <div class="gallery__controls">
-                            <a class="gallery__control gallery__control--github" href="">
-                                <i class="icon-github-circled"></i>
-                            </a>
-                            <a class="gallery__control gallery__control--more" href="">
-                                <i class="icon-plus"></i>
-                            </a>
-                            <a class="gallery__control gallery__control--live" href="">
-                                <i class="icon-eye"></i>
-                            </a>
-                        </div>
                     </div>                    
                 </div>
-                <div class="gallery__item">
+                <div class="gallery__item gallery__item--4">
                     <div class="gallery__overlay">
                         <div class="gallery__text">
-                            <span class="gallery__title">Title</span>
-                            <span class="gallery__description">Description</span>
+                            <span class="gallery__title">Burger Builder</span>
+                            <span class="gallery__description">React, Redux, Firebase</span>
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" href="">
+                                <i class="icon-github-circled"></i>
+                            </a>
+                            <a class="gallery__control gallery__control--more" href="">
+                                <i class="icon-plus"></i>
+                            </a>
+                            <a class="gallery__control gallery__control--live" href="/burgerbuilder">
+                                <i class="icon-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--5">
+                    <div class="gallery__overlay">
+                        <div class="gallery__text">
+                            <span class="gallery__title">Porfolio wersja 1</span>
+                            <span class="gallery__description">HTML, CSS, JS(jQuery), PHP</span>
+                        </div>
+                        <div class="gallery__controls">
+                            <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/Portfoliov2">
+                                <i class="icon-github-circled"></i>
+                            </a>
+                            <a class="gallery__control gallery__control--more" href="">
+                                <i class="icon-plus"></i>
+                            </a>
+                            <a class="gallery__control gallery__control--live" href="./">
+                                <i class="icon-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--6">
+                    <div class="gallery__overlay">
+                        <div class="gallery__text">
+                            <span class="gallery__title">Custom Datepicker</span>
+                            <span class="gallery__description">HTML, CSS, JS(jQuery)</span>
+                        </div>
+                        <div class="gallery__controls">
+                            <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/custom-datepicker">
+                                <i class="icon-github-circled"></i>
+                            </a>
+                            <a class="gallery__control gallery__control--more" href="">
+                                <i class="icon-plus"></i>
+                            </a>
+                            <a class="gallery__control gallery__control--live" href="/datepicker">
+                                <i class="icon-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--7">
+                    <div class="gallery__overlay">
+                        <div class="gallery__text">
+                            <span class="gallery__title">Slider</span>
+                            <span class="gallery__description">HTML, CSS, JS(jQuery)</span>
+                        </div>
+                        <div class="gallery__controls">
+                            <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/slideshow-jquery-gallery">
+                                <i class="icon-github-circled"></i>
+                            </a>
+                            <a class="gallery__control gallery__control--more" href="">
+                                <i class="icon-plus"></i>
+                            </a>
+                            <a class="gallery__control gallery__control--live" href="/slider1">
+                                <i class="icon-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <div class="gallery__overlay">
+                        <div class="gallery__text">
+                            <span class="gallery__title">React Pomodoro Timer</span>
+                            <span class="gallery__description">React, Firebase</span>
+                        </div>
+                        <div class="gallery__controls">
+                            <a class="gallery__control gallery__control--github" target="_blank" href="">
                                 <i class="icon-github-circled"></i>
                             </a>
                             <a class="gallery__control gallery__control--more" href="">
@@ -230,30 +302,11 @@
                 <div class="gallery__item">
                     <div class="gallery__overlay">
                         <div class="gallery__text">
-                            <span class="gallery__title">Title</span>
-                            <span class="gallery__description">Description</span>
+                            <span class="gallery__title">Kalkulator</span>
+                            <span class="gallery__description">HTML, CSS, JS</span>
                         </div>
                         <div class="gallery__controls">
-                            <a class="gallery__control gallery__control--github" href="">
-                                <i class="icon-github-circled"></i>
-                            </a>
-                            <a class="gallery__control gallery__control--more" href="">
-                                <i class="icon-plus"></i>
-                            </a>
-                            <a class="gallery__control gallery__control--live" href="">
-                                <i class="icon-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery__item">
-                    <div class="gallery__overlay">
-                        <div class="gallery__text">
-                            <span class="gallery__title">Title</span>
-                            <span class="gallery__description">Description</span>
-                        </div>
-                        <div class="gallery__controls">
-                            <a class="gallery__control gallery__control--github" href="">
+                            <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/custom-datepicker">
                                 <i class="icon-github-circled"></i>
                             </a>
                             <a class="gallery__control gallery__control--more" href="">
@@ -279,7 +332,7 @@
                 <input name="name" class="form__input" type="text" placeholder="imię i nazwisko">
                 <input name="email" class="form__input" type="text" placeholder="adres e-mail">
                 <textarea name="message" class="form__message" placeholder="wiadomość..."></textarea>
-                <input class="form__submit" type="submit" value="wyślij">
+                <input class="form__submit" name="submit_contact" type="submit" value="wyślij">
             </form>
             <div class="contact__modal">
                 <div class="contact__messages"></div>
@@ -295,6 +348,13 @@
             </div>
             <div class="footer__credits"><a class="footer__link" target="_blank" href="http://www.freepik.com">Designed by Creative_hat / Freepik</a></div>
         </footer>
+    </div>
+    <div class="backdrop">
+        <div class="backdrop__img-container"><img class="backdrop__img" src="./img/burgerbuilder.jpg" alt=""></div>
+        <div class="backdrop__desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum finibus tellus, et pretium lectus tincidunt sit amet. Pellentesque ac ultricies ligula. Nam congue felis massa, non tristique lorem imperdiet sed. Sed a sollicitudin eros. Suspendisse potenti. Vestibulum porta felis sit amet augue sollicitudin elementum. Aliquam erat volutpat. Sed vel magna id libero faucibus tristique. Donec eu risus mollis, commodo risus id, viverra metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum dictum, odio vitae maximus egestas, tortor tellus laoreet leo, eget volutpat lacus purus nec sem. Sed finibus, lacus quis tempus laoreet, magna lacus aliquet dui, sit amet aliquet neque purus quis massa. Pellentesque quis dolor augue. Nam molestie tempus nulla, id dictum purus convallis et. Nulla facilisi.
+       </div>
+        
     </div>
     <script src="js/main.js?=10"></script>
 </body>

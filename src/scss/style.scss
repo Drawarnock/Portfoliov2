@@ -70,14 +70,14 @@
 
     &__btn {
         position: absolute;
-        top: 65%;
+        top: 56%;
         left:18%;
         transform: translate(-50%,-50%);
         color: rgb(38,38,38);
         animation: jump 3s infinite;
         transition: all .5s ease-out;
         .icon-down-open:before {
-            font-size: 40px;
+            font-size: 22px;
             margin:0;
         }
         &:hover {
@@ -148,10 +148,13 @@
     }
 
     &__toggle {
+        display: block;
+        border:none;
+        background-color: transparent;
         height: 35px;
         width: 35px;
         cursor: pointer;
-        padding-top: 10px;
+        padding-top: 5px;
         margin-left:auto;
     }
 
@@ -257,7 +260,6 @@ body.navigation--active {
 }
 
 .about {
-    min-height: 100vh;
     padding: 100px 10px;
     background-image: url('../img/3147.jpg');
     background-position: bottom center;
@@ -283,13 +285,13 @@ body.navigation--active {
         }
     }
 
-    &__paragraph {
+    &__subtitle {
         font-size: 30px;
         margin-bottom: 20px;
     }
 
-    &__paragraph2 {
-        font-size: 22px;
+    &__paragraph {
+        font-size: 18px;
         line-height: 1.8em;
         font-family: 'Open Sans', sans-serif;
     }
@@ -307,6 +309,7 @@ body.navigation--active {
         display: flex;
         justify-content: center;
         height: 950px;
+        align-self: center;
     }
 
     &__fixed {
@@ -395,6 +398,7 @@ body.navigation--active {
     }
 
     &__logo {
+        max-width: 100%;
         display: block;
         position: absolute;
         top:50%;
@@ -449,9 +453,6 @@ body.navigation--active {
         &:after {
             bottom: -42.4264px;
         }
-        &:hover {
-           transform: scale(1.03) rotate(90deg);
-        }
     }
 }
 
@@ -466,7 +467,6 @@ section::after {
     position: relative;
     background-color: white;
     padding: 6em 0 50px;
-    min-height: 100vh;
     z-index: 1;
     
     &::before,&::after {
@@ -506,6 +506,7 @@ section::after {
         background-image: url('http://via.placeholder.com/390x300');
         background-position: center center;
         background-size: cover;
+        background-repeat: no-repeat;
         opacity:0;
         transition: all 0.6s ease-in-out;
         transform: translateY(50%);
@@ -526,6 +527,26 @@ section::after {
 
         &--2 {
             background-image: url('../img/portfoliov1.jpg');
+        }
+
+        &--3 {
+            background-image: url('../img/wwdc2.jpg');
+        }
+
+        &--4 {
+            background-image: url('../img/burgerbuilder.jpg');
+        }
+
+        &--5 {
+            background-image: url('../img/portfoliov2.jpg');
+        }
+
+        &--6 {
+            background-image: url('../img/datepicker.jpg');
+        }
+
+        &--7 {
+            background-image: url('../img/slider1.jpg');
         }
         &:hover {
             .gallery__overlay {
@@ -548,16 +569,19 @@ section::after {
         transform: translate(-50%,-50%);
         transition: all .3s ease;
         opacity: 0;
+        width: 95%;
     }
 
     &__title {
-        font-size: 32px;
+        font-size: 28px;
+
         font-weight: bold;
         display: block;
         text-align: center;
     }
 
     &__description {
+        text-align: center;
         font-size: 22px;
         display: block;
         color: rgb(216, 146, 15);
@@ -616,7 +640,6 @@ svg#bigTriangleColor {
 
 .contact {
     padding: 200px 10px 50px 10px;
-    min-height: 100vh;
     background-color: #252934;
     position: relative;
     &__container {
@@ -677,6 +700,41 @@ svg#bigTriangleColor {
         font-weight: bold;
         font-family: 'Open Sans', sans-serif;
         padding: 15px;
+    }
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1000;
+    &--active {
+        display: block;
+    }
+    &__img-container {
+        width:90%;
+        height: 50%;
+        margin: 20px auto;
+
+    }
+
+    &__img {
+        border: 1px solid white;
+        background-color: white;
+        display: block;
+        max-width: 50%;
+        padding: 20px;
+    }
+
+    &__desc {
+        width:80%;
+        height: 40%;
+        color: white;
+        margin: 20px auto;
     }
 }
 
@@ -947,6 +1005,13 @@ svg#bigTriangleColor {
             font-size: 20px;
         }
     }
+
+    .home__btn {
+        top:60%;
+        .icon-down-open:before {
+            font-size: 28px;
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -959,6 +1024,12 @@ svg#bigTriangleColor {
         }
         &__credits { width: 33.3333332%; }
         &__link { margin: 0 auto; }
+    }
+    .home__btn {
+        top:65%;
+        .icon-down-open:before {
+            font-size: 40px;
+        }
     }
 }
 

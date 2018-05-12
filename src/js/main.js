@@ -18,6 +18,7 @@
         if ($innerAnchors.length > 0) {
                 $innerAnchors.on('click', function(e) {
                 e.preventDefault();
+                $('body').removeClass('navigation--active');
                 const href= $(this).attr('href');
                 const $targetElement = $(href); 
                 const targetToScroll = $targetElement.offset().top ;
@@ -94,17 +95,17 @@ const skills = document.querySelector('.about__skills');
 const titles = document.querySelectorAll('.section__title');
 const contactText = document.querySelector('.contact__container');
 const aboutWho = document.querySelector('.about__who');
- window.addEventListener('scroll', function(e) {
+window.addEventListener('scroll', function(e) {
     const galleryCoords =  offset(gallery);
     const formCoords =  offset(contactForm);
     const skillsCoords =  offset(skills);
     const contactTextCoords =  offset(contactText);
     const aboutWhoCoords =  offset(aboutWho);
-    if(window.scrollY > galleryCoords.top - window.innerHeight*1) {
+    if(window.scrollY > galleryCoords.top - window.innerHeight) {
         document.querySelectorAll('.gallery__item').forEach(item => item.classList.add('gallery__item--active'));
     }
-    if(window.scrollY> formCoords.top - window.innerHeight) contactForm.classList.add('form--active');
-    if(window.scrollY> skillsCoords.top - window.innerHeight) {
+    if(window.scrollY > formCoords.top - window.innerHeight) contactForm.classList.add('form--active');
+    if(window.scrollY > skillsCoords.top - window.innerHeight) {
         document.querySelectorAll('.about__hexagon').forEach(hexagon => hexagon.classList.add('about__hexagon--active'));
     }
     
