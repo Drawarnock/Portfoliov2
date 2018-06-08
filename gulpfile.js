@@ -44,7 +44,12 @@ gulp.task('css', function() {
 gulp.task('js', function() {
     return gulp.src(['src/js/**/*.js', '!src/js/**/*.min.js'])
             .pipe(babel({
-                presets: ['env'],
+                presets: [['env', {
+                    targets: {
+                        // The % refers to the global coverage of users from browserslist
+                        browsers: [ ">0.25%", "not op_mini all"]
+                      }
+                }]],
                 ignore: ['src/js/particles.min.js', 'src/js/jquery-3.2.1.min.js']
             }))
             .pipe(uglify())

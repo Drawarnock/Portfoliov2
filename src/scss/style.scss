@@ -34,28 +34,13 @@ $transition_0_3s_ease: all .3s ease;
     z-index: -1;
 }
 
-.underscore {
-    height: 4px;
-    width:80px;
-    margin: 10px auto 0;
-    
-    &--black {
-        background-color: black;
-    }
-    &--bright {
-        background-color: #cdcdcd;
-    }
-}
-
 .home {
     min-height: 100vh;
     background-size: cover;
     position: relative;
-    opacity:0;
+    opacity:1;
     transition: all 1s ease-in-out;
-    &--active {
-        opacity: 1;
-    }
+    visibility: visible;
 
     &__title {
         position: absolute;
@@ -76,7 +61,7 @@ $transition_0_3s_ease: all .3s ease;
         left:18%;
         transform: translate(-50%,-50%);
         color: rgb(38,38,38);
-        animation: jump 3s infinite;
+        animation: jump 3s infinite normal;
         transition: all .5s ease-out;
         text-decoration: none;
         .icon-down-open:before {
@@ -226,6 +211,10 @@ body.navigation--active {
             margin: 20px auto;
             color:white;
         }
+
+        &__logo {
+            color: white;
+        }
 	}
 }
 
@@ -236,12 +225,12 @@ body.navigation--active {
     align-items: center;
     text-align: center;
     font-size: 48px;
-    transform: translateY(-50%);
-    opacity:0;
+    transform: translateY(0);
+    opacity:1;
     transition: all .5s ease-in-out;
-    &--active {
-        transform: translateY(0);
-        opacity:1;
+    &--hidden {
+        transform: translateY(-50%);
+        opacity:0;
     }
     &--dark {
         color: black;
@@ -281,10 +270,10 @@ body.navigation--active {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        opacity:0;
+        opacity:1;
         transition: all .5s ease-in-out .1s;
-        &--active {
-            opacity:1;
+        &--hidden {
+            opacity:0;
         }
     }
 
@@ -401,7 +390,7 @@ body.navigation--active {
     }
 
     &__logo {
-        max-width: 100%;
+        max-width: 120px;
         display: block;
         position: absolute;
         top:50%;
@@ -411,7 +400,7 @@ body.navigation--active {
     }
 
     &__hexagon {
-        opacity: 0;
+        opacity: 1;
         position: relative;
         display: block;
         width: 120px; 
@@ -419,9 +408,13 @@ body.navigation--active {
         background-color: #228078;
         margin: 34.64px 0;
         box-shadow: 0 0 15px rgba(0,0,0,0.65);
+        transform: rotateZ(90deg);
 
-      
-        &--active {
+        &--hidden {
+           opacity:0;
+        }
+
+        &--animate {
             animation: flip 0.8s ease-in 1 forwards;
 
         }
@@ -510,9 +503,9 @@ section::after {
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        opacity:0;
+        opacity:1;
         transition: all .6s ease-in-out;
-        transform: translateY(50%);
+        transform: translateY(0%);
         @for $i from 0 through 9 {
             &:nth-child(#{$i}){
                 transition-delay: .15 * $i  + .1 + s;
@@ -520,9 +513,9 @@ section::after {
         }
         
 
-        &--active {
-            opacity:1;
-            transform: translateY(0); 
+        &--hidden {
+            opacity:0;
+            transform: translateY(50%); 
         }
         
         &--1 {
@@ -655,11 +648,11 @@ svg#bigTriangleColor {
         width: 95%;
         text-align: center;
         transition: all .5s ease-in-out;
-        transform: translateY(-50%);
-        opacity:0;
-        &--active {
-            transform: translateY(0%);
-            opacity:1;
+        transform: translateY(0);
+        opacity:1;
+        &--hidden {
+            transform: translateY(50%);
+            opacity:0;
         }
     }
     &__info {
@@ -747,8 +740,10 @@ svg#bigTriangleColor {
 }
 
 .form {
-    transform:scale(0);
-    &--active {
+    &--hidden {
+        transform:scale(0);
+    }
+    &--animate {
         animation: bounce 0.5s ease-out 1 forwards;
     }
     &__input, &__message {
@@ -777,6 +772,7 @@ svg#bigTriangleColor {
 
     &__message {
         height: 200px;
+        overflow: auto;
     }
 
     &__submit {
@@ -1062,29 +1058,29 @@ svg#bigTriangleColor {
 }
 
 @keyframes bounce {
-    0% { transform: scale(0); }
-    30% { transform: scale(1); }
-    60% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% { transform: scale(0); opacity: 0; }
+    30% { transform: scale(1); opacity: 1; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 @keyframes flip {
     0% {
-        transform: perspective(400px) rotateX(90deg) rotateY(90deg) rotateZ(90deg);;
+        transform: perspective(400px) rotateX(90deg) rotateY(90deg) rotateZ(90deg);
         opacity: 0;
     }
     
     40% {
-        transform: perspective(400px) rotateX(90deg) rotateY(-20deg) rotateZ(90deg);;
+        transform: perspective(400px) rotateX(90deg) rotateY(-20deg) rotateZ(90deg);
     }
     
     60% {
-        transform: perspective(400px) rotateX(90deg) rotateY(10deg) rotateZ(90deg);;
+        transform: perspective(400px) rotateX(90deg) rotateY(10deg) rotateZ(90deg);
         opacity: 1;
     }
     
     80% {
-        transform: perspective(400px) rotateX(90deg) rotateY(5deg) rotateZ(90deg);;
+        transform: perspective(400px) rotateX(90deg) rotateY(5deg) rotateZ(90deg);
     }
     
     100% {
