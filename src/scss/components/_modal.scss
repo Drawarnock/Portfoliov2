@@ -1,0 +1,36 @@
+.modal {
+    border: 1px solid transparent;
+    position: absolute;
+    background-color: #1E242C;
+    z-index: 10;
+    border-radius: 5px;
+    opacity: 0;
+    border: 5px solid white;
+    display: none;
+    &--active {
+        display: flex;
+        justify-content: center;
+        align-items:Center;
+        animation: modalanim 6s ease-out 1 forwards;
+    }
+
+    &__messages {
+        text-align: center;
+        padding: 20px;
+        
+        &--error {
+            color:red;
+        }
+        &--success {
+            color:green;
+        }
+    }
+    
+    &__message {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        padding: 15px;
+    }
+}
+

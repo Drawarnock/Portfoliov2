@@ -1,0 +1,19 @@
+@import "utils/variables.scss";
+@import "utils/helpers.scss";
+@import "utils/mixins.scss";
+@import "utils/functions.scss";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+
+@import "components/gallery";
+@import "components/backdrop";
+@import "components/form";
+@import "components/socials";
+@import "components/modal";
+@import "components/navigation";
+
+@import "layout/header";
+@import "layout/about";
+@import "layout/footer";

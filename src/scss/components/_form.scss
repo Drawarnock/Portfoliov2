@@ -1,0 +1,62 @@
+.form {
+    &--hidden {
+        transform:scale(0);
+    }
+    &--animate {
+        animation: bounce 0.5s ease-out 1 forwards;
+    }
+    &__input, &__message {
+        display: block;
+        margin: 30px auto;
+        width: 95%;
+        padding: 15px;
+        border: 1px solid transparent;
+        background-color: #1E242C;
+        outline: none;
+        color:#cdcdcd;
+        font-size: 16px;
+        border-radius: 3px;
+        transition: all .4s ease-out;
+
+        @include media(sm) {
+            width:500px;
+            font-size: 18px;
+        }
+
+        &:hover {
+            border: 1px solid #228078;
+        }
+        &:focus {
+            background-color: #228078;
+        }
+
+        &::placeholder {
+            color:#cdcdcd;
+        }
+    }
+
+    &__message {
+        height: 200px;
+        overflow: auto;
+    }
+
+    &__submit {
+        width: 60%;
+        display: block;
+        margin: 30px auto 10px;
+        border: 1px solid white;
+        background-color: #1E242C;
+        padding: 15px;
+        font-size: 20px;
+        color:#cdcdcd;
+        transition: all .3s ease-out;
+        cursor: pointer;
+
+        @include media(sm) { width:200px; }
+        
+        &:hover {
+            background-color: #228078;
+            border: 1px solid #228078;
+        }
+    }
+}

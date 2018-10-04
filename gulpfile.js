@@ -9,6 +9,7 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 var htmlmin = require('gulp-htmlmin');
+var rename = require('gulp-rename');
 var del = require('del');
 var sequence = require('run-sequence');
 
@@ -26,11 +27,12 @@ gulp.task('serve', ['sass'], function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('src/scss/**/*.scss')
+    return gulp.src('src/scss/main.scss')
             .pipe(sourcemaps.init())
             .pipe(sass().on('error', sass.logError))
             .pipe(autoprefixer({browsers: ['last 10 versions']}))
             .pipe(sourcemaps.write())
+            .pipe(rename('style.css'))
             .pipe(gulp.dest('src/css'))
             .pipe(browserSync.stream());
 });

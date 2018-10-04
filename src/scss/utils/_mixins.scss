@@ -1,0 +1,17 @@
+@mixin media($breakpoint){
+    @if($breakpoint == xsm) {
+        @media only screen and (min-width: $bp-xsm) { @content };
+    }
+    @if($breakpoint == sm) {
+        @media only screen and (min-width: $bp-sm) { @content }; 
+    }
+    @if($breakpoint == md) {
+        @media only screen and (min-width: $bp-md) { @content }; 
+    }
+    @if($breakpoint == xmd) {
+        @media only screen and (min-width: $bp-xmd) { @content }; 
+    }
+    @if($breakpoint == lg) {
+        @media only screen and (min-width: $bp-lg) { @content }; 
+    }
+}

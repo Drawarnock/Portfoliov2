@@ -3,10 +3,10 @@
     const links = document.querySelectorAll('a[href^="#"]');
     const nav = document.querySelector('.navigation');
     const form = document.querySelector('.form');
-    const modal = document.querySelector('.contact__modal');
+    const modal = document.querySelector('.modal');
     const body = document.querySelector('body');
     const navigationToggle = document.querySelector('.navigation__toggle');
-    const formMessages = document.querySelector('.contact__messages');
+    const formMessages = document.querySelector('.modal__messages');
     const input = document.querySelector('.form__input');
     const hexagons = document.querySelectorAll('.about__hexagon');
 
@@ -130,21 +130,21 @@
         })
         .then(res => {
             if(res.status === 200) {
-                formMessages.classList.remove('contact__messages--error');
-                formMessages.classList.add('contact__messages--success');
+                formMessages.classList.remove('modal__messages--error');
+                formMessages.classList.add('modal__messages--success');
                 form.reset();
             } else {
-                formMessages.classList.remove('contact__messages--success');
-                formMessages.classList.add('contact__messages--error');
+                formMessages.classList.remove('modal__messages--success');
+                formMessages.classList.add('modal__messages--error');
             }
             return res.text();
         })
         .then(data => {
             
             formMessages.innerHTML = data;
-            modal.classList.add('contact__modal--active');
+            modal.classList.add('modal--active');
             modal.addEventListener('animationend', function() {
-                    this.classList.remove('contact__modal--active');
+                    this.classList.remove('modal--active');
                 }); 
         })
         .catch(err => {
