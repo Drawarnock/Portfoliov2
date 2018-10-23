@@ -20,12 +20,6 @@
     }
 }
 
-@keyframes jump {
-    0% { transform:translateY(-50%); }
-    50% { transform:translateY(-30%); }
-    100% { transform:translateY(-50%); }
-}
-
 @keyframes bounce {
     0% { transform: scale(0); opacity: 0; }
     30% { transform: scale(1); opacity: 1; }
@@ -78,4 +72,22 @@
         opacity:0;
     }
 
+}
+
+@keyframes pulse-arrow {
+    0% {
+        opacity:1;
+        transform: scale(1) translate(-50%, -50%);
+
+    }
+
+    60% {
+        opacity: 0;
+        transform: scale(1.5) translate(-30%, -35%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5) translate(-30%, -35%);
+    }
 }

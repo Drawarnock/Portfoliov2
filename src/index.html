@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <meta name="description" content="Konrad Wisłocki Front End Developer - usługi tworzenia stron internetowych">
     <meta name="author" content="Konrad Wisłocki">
     <title>Konrad Wisłocki - Front-End Developer</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700|Kaushan+Script|Open+Sans&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
     <link href="css/fontello.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/particles.min.js"></script>
+    <link href="css/linea.css" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117958165-1"></script>
     <script>
@@ -20,135 +22,219 @@
         gtag('config', 'UA-117958165-1');
     </script>
 </head>
+
 <body>
     <div class="wrapper">
-        <header class="home" id="home">
-                <div class="triangle"></div>
-                <div id="particles-js"></div>
-                <nav class="navigation">
-                    <div class="navigation__inner">
-                        <!-- <div class="navigation__logo-container"> -->
-                            <a class="navigation__logo" href="#home">
-                                <img src="img/logo.png" alt="">
-                            </a>
-                        <!-- </div> -->
-                        <ul class="navigation__list">
-                            <li class="navigation__item"><a class="navigation__link" href="#about"><span>O</span> MNIE</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="#projects"><span>P</span>ROJEKTY</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="#contact"><span>K</span>ONTAKT</a></li>
-                        </ul>
-                        <button class="navigation__toggle">
-                            <span class="navigation__bar navigation__bar--left-half"></span>
-                            <span class="navigation__bar navigation__bar--full"></span>
-                            <span class="navigation__bar navigation__bar--right-half"></span>
-                        </button>
-                    </div>
+        <header class="header" id="home">
+            <!-- <img class="header__logo" src="img/logo-big.png" alt="Website Logo"> -->
+            <div class="navigation">
+                <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+                <label for="navi-toggle" class="navigation__button">
+                    <span class="navigation__icon">&nbsp;</span>
+                </label>
+                <div class="navigation__background">
+                    &nbsp;
+                </div>
+                <nav class="navigation__nav">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">O mnie</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Projekty</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Kontakt</a>
+                        </li>
+                    </ul>
                 </nav>
-                <div class="home__title">Konrad Wisłocki <br>Front-End Developer</div>
-                <a class="home__btn" href="#about"><i class="icon-down-open"></i></a>
+            </div>
+
+            <div class="heading-box">
+
+                <h1 class="header__heading-1">
+                    <span class="header__heading-1--light header__heading-1--name">Konrad
+                        <span class="header__heading-1--bold">Wisłocki</span>
+                    </span>
+                    <span class="header__heading-1--light header__heading-1--position">
+                        <span class="header__heading-1--bold ">Front-End</span> Developer
+                    </span>
+                    <span class="header__heading-1--portfolio">Portfolio</span>
+                </h1>
+            </div>
+            <a class="double-arrow" href="#about">
+                <span class="double-arrow__container">
+                    <span class="double-arrow__top">
+                        <span class="double-arrow__left-half"></span>
+                        <span class="double-arrow__right-half"></span>
+                    </span>
+                    <span class="double-arrow__bottom">
+                        <span class="double-arrow__left-half"></span>
+                        <span class="double-arrow__right-half"></span>
+                    </span>
+                </span>
+            </a>
+            <div class="double-arrow double-arrow__anim--pulse">
+                <span class="double-arrow__container">
+                    <span class="double-arrow__top">
+                        <span class="double-arrow__left-half"></span>
+                        <span class="double-arrow__right-half"></span>
+                    </span>
+                    <span class="double-arrow__bottom">
+                        <span class="double-arrow__left-half"></span>
+                        <span class="double-arrow__right-half"></span>
+                    </span>
+                </span>
+            </div>
         </header>
         <section class="about" id="about">
-            <h2 class="section__title">O mnie</h2>
-            <div class="about__container">
-                <div class="about__who">
-                    <img src="img/kw.png" alt="">
-                    <div class="about__desc">
-                        <h2 class="about__subtitle"><b>Cześć nazywam się Konrad Wisłocki.</b></h2>
-                        <p class="about__paragraph">Aktualnie mieszkam w Krakowie, gdzie poszukuję pracy jako junior Front-End developer. Posiadam tytuł inżyniera elektryka, jednak swoją przyszłośc postanowiłem związać z programowaniem. Pierwszą styczność z programowaniem miałem w liceum gdzie uczyłem się Turbopascala oraz C++. Popularną "webówką" interesuję się od niedawna. W listopadzie ubiegłego roku przystąpiłem do projektu unijnego, w którym odbyłem 120-godzinne szkolenie z zakresu frontendu oraz 3-miesięczny staż. W mniejszym lub większym stopniu znam: HTML5, CSS3/SCSS, JS(ES6), jQuery, React, MySQL, Gulp, Bootstrap, PHP, GIT. W tym momencie najbardziej chcę się rozwijać w tworzeniu aplikacji w React.js, Node.js czy PHP. W niedługim czasie planuję naukę frameworka Laravel, React Native oraz poszerzać wiedzę w zakresie React.js, Node.js/Express.js. Staram się aby mój kod był czysty i naprostszy jak się da. Serdecznie zapraszam do kontaktu!</p>
+            <h2 class="heading-2 heading-2--about heading-2--dark h-margin-bottom-big ">About</h2>
+
+            <div class="big-card">
+                <div class="big-card__left-part">
+                    <div class="big-card__photo">
+                        <img src="img/kw.jpg" alt="">
+                    </div>
+                    <div class="panel">
+                        <div class="panel__item">
+                            <span class="panel__title">
+                                <i class="icon ion-ios-person"></i>
+                                <span>Name</span>
+                            </span>
+                            <span class="panel__info">Konrad Wisłocki</span>
+                        </div>
+                        <div class="panel__item">
+                            <span class="panel__title">
+                                <i class="icon ion-ios-briefcase"></i>
+                                <span>Designation</span>
+                            </span>
+                            <span class="panel__info">Front-end Developer / JS Developer</span>
+                        </div>
+                        <div class="panel__item">
+                            <span class="panel__title">
+                                <i class="icon ion-ios-calendar"></i>
+                                <span>Date of Birth</span>
+                            </span>
+                            <span class="panel__info">1 March 1993</span>
+                        </div>
+                        <div class="panel__item">
+                            <span class="panel__title">
+                                <i class="icon ion-ios-pin"></i>
+                                <span>Location</span>
+                            </span>
+                            <span class="panel__info">Gorlice, Poland</span>
+                        </div>
+                        <div class="panel__item">
+                            <span class="panel__title">
+                                <i class="icon ion-ios-mail"></i>
+                                <span>Email</span>
+                            </span>
+                            <span class="panel__info">wislocki.konrad@gmail.com</span>
+                        </div>
                     </div>
                 </div>
-                <div class="about__skills">
-                    <div class="about__fixed">
-                        <div class="about__item about__item--1">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/html5.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--2">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/css3.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--3">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/js.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--4">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/jquery.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--5">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/sass.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--6">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/git.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--7">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/php.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--8">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/mysql.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--9">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/photoshop.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--10">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/bootstrap.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--11">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/gulp.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--12">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/cplus.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--13">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/react.png" alt="">
-                            </div>
-                        </div>
-                        <div class="about__item about__item--15">
-                            <div class="about__hexagon">
-                                <span></span>
-                                <img class="about__logo" src="img/redux.png" alt="">
-                            </div>
+                <div class="big-card__right-part">
+                    <div class="big-card__desc">
+                        <h3 class="heading-3 h-margin-bottom-sm">Hi there,</h3>
+                        <div class="big-card__text">
+                            <p class="big-card__paragraph">
+                                Aktualnie mieszkam w Krakowie, gdzie poszukuję pracy jako junior
+                                Front-End developer. Posiadam tytuł inżyniera elektryka, jednak swoją przyszłośc
+                                postanowiłem związać z programowaniem. Pierwszą styczność z programowaniem miałem w
+                                liceum
+                                gdzie uczyłem się Turbopascala oraz C++. Popularną "webówką" interesuję się od
+                                niedawna. W
+                                listopadzie ubiegłego roku przystąpiłem do projektu unijnego, w którym odbyłem
+                                120-godzinne
+                                szkolenie z zakresu frontendu oraz 3-miesięczny staż. W mniejszym lub większym stopniu
+                                znam: HTML5, CSS3/SCSS, JS(ES6), jQuery, React, MySQL, Gulp, Bootstrap, PHP, GIT. W tym
+                                momencie najbardziej chcę się rozwijać w tworzeniu aplikacji w React.js, Node.js czy
+                                PHP.
+                            </p>
+                            <p class="big-card__paragraph">
+                                W
+                                niedługim czasie planuję naukę frameworka Laravel, React Native oraz poszerzać wiedzę w
+                                zakresie React.js, Node.js/Express.js. Staram się aby mój kod był czysty i naprostszy
+                                jak
+                                się da. Serdecznie zapraszam do kontaktu!
+                            </p>
                         </div>
                     </div>
+                    <div class="socialsmedia">
+                        <a class="socialsmedia__icon" href=""><i class="icon ion-logo-github"></i></a>
+                        <a class="socialsmedia__icon" href=""><i class="icon ion-logo-linkedin"></i></a>
+                    </div>
+                    <button class="btn btn--bold h-margin-top-vsm">Download Resume</button>
                 </div>
             </div>
         </section>
+        <section class="skills" id="skills">
+            <h2 class="heading-2 heading-2--skills heading-2--dark h-margin-bottom-huge ">Skills</h2>
+            <div class="card-container">
+                <div class="feature-card feature-card--1">
+                    <span class="feature-card__icon">
+                        <i class="icon-basic-webpage"></i>
+                    </span>
+                    <h4 class="feature-card__title h-margin-top-vsm">FRONTEND</h4>
+                    <div class="feature-card__text h-margin-top-vsm">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam non mauris facilisis mollis et eu dui. Etiam id faucibus turpis, eget elementum sapien. Curabitur ullamcorper sapien ac justo ornare scelerisque. Duis eleifend, mi ut egestas varius, tellus sem gravida nunc, sit amet dignissim lectus urna in ipsum. Etiam quis lacus quam
+                    </div>
+                    <div class="feature-card__skills">
+                        <img src="img/html.png" class="feature-card__logo" alt="">
+                        <img src="img/css.png" class="feature-card__logo" alt="">
+                        <img src="img/sass.png" class="feature-card__logo" alt="">
+                        <img src="img/js.png" class="feature-card__logo" alt="">
+                        <img src="img/jquery.png" class="feature-card__logo" alt="">
+                        <img src="img/react.png" class="feature-card__logo" alt="">
+                        <img src="img/redux.png" class="feature-card__logo" alt="">
+                    </div>
+                </div>
+                <div class="feature-card feature-card--2">
+                    <span class="feature-card__icon">
+                        <i class="icon-basic-settings"></i>
+                    </span>
+                    <h4 class="feature-card__title h-margin-top-vsm">BACKEND</h4>
+                    <div class="feature-card__text h-margin-top-vsm">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam non mauris facilisis mollis et eu dui. Etiam id faucibus turpis, eget elementum sapien. Curabitur ullamcorper sapien ac justo ornare scelerisque. Duis eleifend, mi ut egestas varius, tellus sem gravida nunc, sit amet dignissim lectus urna in ipsum. Etiam quis lacus quam
+                    </div>
+                    <div class="feature-card__skills">
+                            <img src="img/node.png" class="feature-card__logo" alt="">
+                            <img src="img/express.png" class="feature-card__logo feature-card__logo--express" alt="">
+                            <img src="img/php.png" class="feature-card__logo" alt="">
+                            <img src="img/mongodb.png" class="feature-card__logo" alt="">
+                            <img src="img/mysql.png" class="feature-card__logo" alt="">
+                    </div>
+                </div>
+                <div class="feature-card feature-card--3">
+                    <span class="feature-card__icon">
+                        <i class="icon-basic-pencil-ruler"></i>
+                    </span>
+                    <h4 class="feature-card__title h-margin-top-vsm">DESIGN</h4>
+                    <div class="feature-card__text h-margin-top-vsm">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam non mauris facilisis mollis et eu dui. Etiam id faucibus turpis, eget elementum sapien. Curabitur ullamcorper sapien ac justo ornare scelerisque. Duis eleifend, mi ut egestas varius, tellus sem gravida nunc, sit amet dignissim lectus urna in ipsum. Etiam quis lacus quam
+                    </div>
+                    <div class="feature-card__skills">
+                        <img src="img/photoshop.png" class="feature-card__logo" alt="">
+                    </div>
+                </div>
+                <div class="feature-card feature-card--4">
+                    <span class="feature-card__icon">
+                        <i class="icon-basic-lightbulb"></i>
+                    </span>
+                    <h4 class="feature-card__title h-margin-top-vsm">OPEN SOURCE & TOOLS</h4>
+                    <div class="feature-card__text h-margin-top-vsm">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam non mauris facilisis mollis et eu dui. Etiam id faucibus turpis, eget elementum sapien. Curabitur ullamcorper sapien ac justo ornare scelerisque. Duis eleifend, mi ut egestas varius, tellus sem gravida nunc, sit amet dignissim lectus urna in ipsum. Etiam quis lacus quam
+                    </div>
+                    <div class="feature-card__skills">
+                        <img src="img/gulp.png" class="feature-card__logo" alt="">
+                        <img src="img/npm.png" class="feature-card__logo feature-card__logo--npm" alt="">
+                        <img src="img/webpack.png" class="feature-card__logo" alt="">
+                        <img src="img/git.png" class="feature-card__logo" alt="">
+                    </div>
+                </div>
+        </section>
         <section class="projects" id="projects">
-            <h2 class="section__title">Projekty</h2>
+            <h2 class="heading-2 heading-2--projects heading-2--dark">Projects</h2>
             <div class="gallery">
                 <div class="gallery__item gallery__item--1">
                     <div class="gallery__overlay">
@@ -158,10 +244,10 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control" href="https://github.com/Drawarnock/WWDC1" target="_blank">
-                                <i class="icon-github-circled"></i>
+                                See Code
                             </a>
                             <a class="gallery__control gallery__control--live" href="/challenge1">
-                                <i class="icon-eye"></i>
+                                Live
                             </a>
                         </div>
                     </div>
@@ -174,10 +260,10 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/portfolio">
-                                <i class="icon-github-circled"></i>
+                                See Code
                             </a>
                             <a class="gallery__control gallery__control--live" href="/portfoliov1">
-                                <i class="icon-eye"></i>
+                                Live
                             </a>
                         </div>
                     </div>
@@ -190,13 +276,13 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" href="https://github.com/Drawarnock/WWDC2">
-                                <i class="icon-github-circled"></i>
+                                See Code
                             </a>
                             <a class="gallery__control gallery__control--live" href="/challenge2">
-                                <i class="icon-eye"></i>
+                                Live
                             </a>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="gallery__item gallery__item--4">
                     <div class="gallery__overlay">
@@ -206,7 +292,7 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--live" href="/burgerbuilder">
-                                <i class="icon-eye"></i>
+                                Live
                             </a>
                         </div>
                     </div>
@@ -219,10 +305,10 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/Portfoliov2">
-                                <i class="icon-github-circled"></i>
+                                See Code
                             </a>
                             <a class="gallery__control gallery__control--live" href="./">
-                                <i class="icon-eye"></i>
+                                Live
                             </a>
                         </div>
                     </div>
@@ -235,10 +321,10 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/custom-datepicker">
-                                <i class="icon-github-circled"></i>
+                                See Code
                             </a>
                             <a class="gallery__control gallery__control--live" href="/datepicker">
-                                <i class="icon-eye"></i>
+                                Live
                             </a>
                         </div>
                     </div>
@@ -251,10 +337,10 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/slideshow-jquery-gallery">
-                                <i class="icon-github-circled"></i>
+                                See Code
                             </a>
                             <a class="gallery__control gallery__control--live" href="/slider1">
-                                <i class="icon-eye"></i>
+                                Live
                             </a>
                         </div>
                     </div>
@@ -267,10 +353,10 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="">
-                                <i class="icon-github-circled"></i>
+                                See Code
                             </a>
                             <a class="gallery__control gallery__control--live" href="">
-                                <i class="icon-eye"></i>
+                                Live
                             </a>
                         </div>
                     </div>
@@ -283,10 +369,10 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/custom-datepicker">
-                                <i class="icon-github-circled"></i>
+                                See Code
                             </a>
                             <a class="gallery__control gallery__control--live" href="">
-                                <i class="icon-eye"></i>
+                                Live
                             </a>
                         </div>
                     </div>
@@ -294,33 +380,52 @@
             </div>
         </section>
         <section class="contact" id="contact">
-                <svg id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 102" preserveAspectRatio="none">
-                    <path d="M0 0 L50 100 L100 0 Z" />
-                </svg>
-            <h2 class="section__title section__title--bright">Kontakt</h2>
+            <svg id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50"
+                viewBox="0 0 100 102" preserveAspectRatio="none">
+                <path d="M0 0 L50 100 L100 0 Z" />
+            </svg>
+            <h2 class="heading-2 heading-2--contact heading-2--light h-margin-bottom-big">Contact</h2>
             <div class="contact__container">
-                <span class="contact__info">Chciałbyś mnie o coś zapytać lub masz ofertę współpracy? Zapraszam do kontaktu!</span>
+                <span class="contact__info">Chciałbyś mnie o coś zapytać lub masz ofertę współpracy? Zapraszam do
+                    kontaktu!</span>
             </div>
-            <form class="form" action="contact.php" method="post" >
-                <input name="name" class="form__input" type="text" placeholder="imię i nazwisko">
-                <input name="email" class="form__input" type="text" placeholder="adres e-mail">
-                <textarea name="message" class="form__message" placeholder="wiadomość..."></textarea>
-                <input class="form__submit" name="submit_contact" type="submit" value="wyślij">
+            <form class="form" action="contact.php" method="post">
+                <div class="form__group">
+                    <input name="name" class="form__input" type="text" id="name" placeholder="Full Name" autocomplete="off">
+                    <label class="form__label" for="name">Full Name</label>
+                </div>
+                <div class="form__group">
+                    <input name="email" class="form__input" type="text" id="email" placeholder="E-mail Address">
+                    <label class="form__label" for="email">E-mail Address</label>
+                </div>
+                <div class="form__group">
+                    <textarea name="message" class="form__message" id="message" placeholder="Message" ></textarea>
+                    <label class="form__label" for="message">Message</label>
+                </div>
+                <input class="form__submit" name="submit_contact" type="submit" value="Submit">
             </form>
             <div class="modal">
                 <div class="modal__messages"></div>
             </div>
         </section>
         <footer class="footer">
-            <div class="footer__copyright">Konrad Wisłocki &copy; 2018</div>
+            
             <div class="socials">
-                <a href="https://www.facebook.com/profile.php?id=100002727251129" target="_blank" class="socials__icon socials__icon--fb"><i class="icon-facebook"></i></a>
-                <a href="https://www.linkedin.com/in/konrad-wislocki/" target="_blank" class="socials__icon socials__icon--in"><i class="icon-linkedin"></i></a>
-                <a href="https://github.com/Drawarnock" target="_blank" class="socials__icon socials__icon--gh"><i class="icon-github-circled"></i></a>
+                <a href="https://www.linkedin.com/in/konrad-wislocki/" target="_blank" class="socials__icon socials__icon--in">
+                    <i class="icon ion-logo-linkedin"></i>
+                </a>
+                <a href="https://github.com/Drawarnock" target="_blank" class="socials__icon socials__icon--gh">
+                    <i class="icon ion-logo-github"></i>
+                </a>
             </div>
-            <div class="footer__credits"><a class="footer__link" target="_blank" href="http://www.freepik.com">Designed by Creative_hat / Freepik</a></div>
+            <div class="footer__copyright"> Created by Konrad Wisłocki &copy; 2018. All rights reserved.</div>
+            <ul class="footer__credits">
+                <li class="footer__policy"><a class="footer__link" href="">Privacy Policy</a></li>
+                <li class="footer__policy"><a class="footer__link" href="">Cookies Policy</a></li>
+            </ul>
         </footer>
     </div>
     <script src="js/main.js"></script>
 </body>
+
 </html>

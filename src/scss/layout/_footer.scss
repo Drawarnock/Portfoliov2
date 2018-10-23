@@ -2,7 +2,7 @@
     padding: 10px;
     background-color: #1B242F;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
 
@@ -20,7 +20,7 @@
         text-align: center;
 
         @include media(md) {
-            width: 33.3333332%;
+            width: 40%;
             margin: 0 auto;
         }
     }
@@ -28,16 +28,23 @@
     &__credits {
         width:100%;
         margin: auto;
+        font-size: 1.8rem;
         text-align: center;
+        list-style-type: none;
 
-        @include media(md) { width: 33.3333332%; }
+        @include media(md) { width: 30%; }
+    }
+
+    &__policy {
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
     }
 
     &__link {
         color:#cdcdcd;
         display: block;
         text-decoration: none;
-        margin: 20px auto;
 
         @include media(md) { margin: 0 auto; }
 
@@ -47,13 +54,6 @@
     }
 }
 
-.icon-facebook:before, .icon-github-circled:before, .icon-linkedin:before { 
-    font-size: 24px;
-    color:#cdcdcd;
-    margin:0;
-}
 
-.icon-cancel-circled:before { color:red; font-size: 60px; }
-.icon-ok-circled:before { color:green; font-size: 60px; }
-.icon-facebook:before {padding:13px 18px; }
-.icon-github-circled:before, .icon-linkedin:before { padding:13px 15px; }
+// .icon-cancel-circled:before { color:red; font-size: 60px; }
+// .icon-ok-circled:before { color:green; font-size: 60px; }

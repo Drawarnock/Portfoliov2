@@ -4,7 +4,8 @@
     margin:0;
     padding:0;
     box-sizing: inherit;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 html {
@@ -12,7 +13,31 @@ html {
     font-size: 62.5%; // 1rem - 10px
 }
 
+body {
+    background-color: rgba(#dedede, .4);
+}
+
 .wrapper {
     width: 100%;
     overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(#888, .5); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

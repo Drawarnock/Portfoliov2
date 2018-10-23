@@ -1,46 +1,72 @@
-.home {
+.header {
     min-height: 100vh;
     background-size: cover;
     position: relative;
     opacity:1;
     transition: all 1s ease-in-out;
-    visibility: visible;
+    background-image: linear-gradient(to right bottom, rgba(#232323,.66), rgba(#232323,.66)), url('../img/forest.jpg');
+    filter: grayscale(60%);
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba($light-grey, .7);
 
-    &__title {
-        position: absolute;
-        top:50%;
-        left:21%;
-        transform: translate(-50%,-50%);
-        font-weight: bold;
-        color: rgb(38, 38, 38);
-        font-size: 4vw;
-        text-align: center;
-        text-shadow: 1px 1px 2px #323232;
+    &__heading-1 {
+        display: inline-block;
+        color: $color-white;
+        text-transform: uppercase;
+        border-top: 2px solid $color-white;
+        border-bottom: 2px solid $color-white;
+        padding: 6rem 4rem;
+        &--name {
+            display: inline-block;
+            font-size: 4.8rem;
+            margin-bottom: 1rem;
+        }
 
+        &--position {
+            display: inline-block;
+            letter-spacing: 2px;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        &--portfolio {
+            display: inline-block;
+            letter-spacing: 10px;
+            font-size: 6.5rem;
+        }
+
+        &--light {
+            font-weight: 300;
+        }
+
+        &--bold {
+            font-weight: 700;
+        }
+        
     }
 
-    &__btn {
-        position: absolute;
-        top: 56%;
-        left:18%;
-        transform: translate(-50%,-50%);
-        color: rgb(38,38,38);
-        animation: jump 3s infinite normal;
-        transition: all .5s ease-out;
-        text-decoration: none;
+    &__logo {
+        display: block;
+        width: 12rem;
+        height: auto;
 
-        @include media(sm) { top: 60%; }
-        @include media(md) { top: 65%; }
+    } 
+}
 
-        .icon-down-open:before {
-            font-size: 22px;
-            margin:0;
-
-            @include media(sm) { font-size: 28px; }
-            @include media(md) { font-size: 40px; }
-        }
-        &:hover {
-          color: #228078;
-        }
-    }
+.heading-box  {
+    text-align: left;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 65vh;
+    padding: 3rem 4rem;
+    display:flex;
+    // box-shadow: 0 1rem 2rem rgba(0,0,0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }

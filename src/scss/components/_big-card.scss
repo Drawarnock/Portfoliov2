@@ -1,0 +1,95 @@
+.big-card {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 5rem;
+    color: rgba($light-black, .9);
+    display: flex;
+    // box-shadow: 0 2rem 5rem rgba(0,0,0, 0.04);
+
+    &__left-part {
+        flex: 0 0 30%;
+    }
+
+    &__right-part {
+        flex: 0 0 70%;
+        padding: 2rem 5rem;
+    }
+
+    &__photo {
+        width: 25rem;
+        height: 25rem;
+        overflow: hidden;
+        border-radius: 50%;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        line-height: 1.8;
+    }
+
+    &__paragraph {
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+
+.panel {
+
+    padding: 3rem 0 3rem 1rem;
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__title {
+        display: block;
+        color: rgba($light-black, .9);
+        font-size: 2rem;
+     
+        margin-bottom: 1rem;
+
+        i {
+            margin-right: .5rem;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__info {
+        font-size: 1.8rem;
+    }
+}
+
+.socialsmedia {
+    margin-top: 2rem;
+    &__icon {
+        &:link, &:visited {
+            display: inline-block;
+            color: rgba($light-black, .9);
+            transition: all .3s ease;
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            } 
+           i {
+               font-size: 3.5rem;
+               transition: all .3s ease;
+           }
+        }
+
+        &:hover {
+
+        }
+    }
+}

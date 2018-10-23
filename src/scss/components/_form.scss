@@ -7,8 +7,7 @@
     }
     &__input, &__message {
         display: block;
-        margin: 30px auto;
-        width: 95%;
+        width: 100%;
         padding: 15px;
         border: 1px solid transparent;
         background-color: #1E242C;
@@ -19,7 +18,6 @@
         transition: all .4s ease-out;
 
         @include media(sm) {
-            width:500px;
             font-size: 18px;
         }
 
@@ -33,6 +31,40 @@
         &::placeholder {
             color:#cdcdcd;
         }
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        font-size: 18px;
+        top: 15px;
+    }
+
+    &__message:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        font-size: 18px;
+        top: 15px;
+    }
+
+    &__group {
+        margin: 30px auto;
+        width: 95%;
+        position: relative;
+
+        @include media(sm) {
+            width:500px;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 16px;
+        display: inline-block;
+        color:#cdcdcd;
+        font-size: 10px;
+        transition: all .3s ease;
+        top: 1px;
     }
 
     &__message {

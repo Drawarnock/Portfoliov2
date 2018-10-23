@@ -1,0 +1,49 @@
+.double-arrow {
+    z-index: 2;
+    width: 30px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    &__container {
+        position: absolute;
+        top:15px;
+    }
+
+    &__top, &__bottom {
+        margin-left: 5px;
+        display: block;
+    }
+
+    &__bottom {
+        transform: translateY(20px);
+    }
+
+    &__left-half {
+        display: block;
+        width: 20px;
+        background-color: $light-black;
+        height: 1px;
+        transform: translateX(-10px) rotate(45deg);
+        transform-origin: right;
+    }
+
+    &__right-half {
+        display: block;
+        width: 20px;
+        background-color: $light-black;
+        height: 1px;
+        transform:  translateX(10px) translateY(-1px) rotate(-45deg);
+        transform-origin: left;
+    }
+
+    &__anim {
+        &--pulse {
+            z-index: 1;
+            animation: pulse-arrow 2s ease-out .2s infinite;
+        }
+    }
+}
