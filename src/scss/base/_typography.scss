@@ -48,7 +48,7 @@ svg#bigTriangleColor {
 
     &--about {
         &::before {
-            content: 'ABOUT';
+            content: 'ABOUT ME';
         }
     }
 
@@ -149,7 +149,7 @@ svg#bigTriangleColor {
         opacity:1;
         margin-bottom: 6rem;
 
-        @include media(sm) { width:550px; }
+        @include media(sm) { width:700px; }
 
         &--hidden {
             transform: translateY(50%);

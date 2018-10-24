@@ -13,7 +13,7 @@
         right: 3.5rem;
         border-radius: 50%;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        box-shadow: 0 1rem 3rem rgba($color-black, .2);
         text-align: center;
         cursor: pointer;
 
@@ -33,6 +33,7 @@
         background-image: radial-gradient(#000000, #434343);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+        opacity: .95;
 
         // @include respond(tab-portrait) {
         //     top: 3.5rem;
@@ -68,7 +69,7 @@
 
         &:link, &:visited {
             display: inline-block;
-            font-size: 5rem;
+            font-size: 6rem;
             font-weight: 300;
             padding: 1rem 2rem;
             color: $color-white;

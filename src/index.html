@@ -10,7 +10,6 @@
     <title>Konrad Wisłocki - Front-End Developer</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
-    <link href="css/fontello.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/linea.css" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,13 +37,16 @@
                 <nav class="navigation__nav">
                     <ul class="navigation__list">
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">O mnie</a>
+                            <a href="#about" class="navigation__link">About Me</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Projekty</a>
+                            <a href="#about" class="navigation__link">Skills</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Kontakt</a>
+                            <a href="#projects" class="navigation__link">Projects</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#contact" class="navigation__link">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -53,13 +55,11 @@
             <div class="heading-box">
 
                 <h1 class="header__heading-1">
-                    <span class="header__heading-1--light header__heading-1--name">Konrad
-                        <span class="header__heading-1--bold">Wisłocki</span>
-                    </span>
                     <span class="header__heading-1--light header__heading-1--position">
-                        <span class="header__heading-1--bold ">Front-End</span> Developer
+                        Front-End Developer
                     </span>
                     <span class="header__heading-1--portfolio">Portfolio</span>
+                    <span class="header__heading-1--light header__heading-1--name">Konrad Wisłocki</span>
                 </h1>
             </div>
             <a class="double-arrow" href="#about">
@@ -88,7 +88,7 @@
             </div>
         </header>
         <section class="about" id="about">
-            <h2 class="heading-2 heading-2--about heading-2--dark h-margin-bottom-big ">About</h2>
+            <h2 class="heading-2 heading-2--about heading-2--dark h-margin-bottom-big ">About Me</h2>
 
             <div class="big-card">
                 <div class="big-card__left-part">
@@ -240,14 +240,20 @@
                     <div class="gallery__overlay">
                         <div class="gallery__text">
                             <span class="gallery__title">Weekly Web Dev Challenge 1</span>
-                            <span class="gallery__description">PSD do HTML, HTML, CSS</span>
+                            <span class="gallery__description">PSD to HTML, HTML, CSS</span>
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control" href="https://github.com/Drawarnock/WWDC1" target="_blank">
-                                See Code
+                                <span class="gallery__control--visible">See Code</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-logo-github"></i>
+                                </span>
                             </a>
                             <a class="gallery__control gallery__control--live" href="/challenge1">
-                                Live
+                                <span class="gallery__control--visible">Live</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-ios-desktop"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -255,15 +261,21 @@
                 <div class="gallery__item gallery__item--2">
                     <div class="gallery__overlay">
                         <div class="gallery__text">
-                            <span class="gallery__title">Portfolio wersja 1</span>
+                            <span class="gallery__title">Portfolio version 1</span>
                             <span class="gallery__description">HTML, CSS, JS</span>
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/portfolio">
-                                See Code
+                                <span class="gallery__control--visible">See Code</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-logo-github"></i>
+                                </span>
                             </a>
                             <a class="gallery__control gallery__control--live" href="/portfoliov1">
-                                Live
+                                <span class="gallery__control--visible">Live</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-ios-desktop"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -276,10 +288,16 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" href="https://github.com/Drawarnock/WWDC2">
-                                See Code
+                                <span class="gallery__control--visible">See Code</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-logo-github"></i>
+                                </span>
                             </a>
                             <a class="gallery__control gallery__control--live" href="/challenge2">
-                                Live
+                                <span class="gallery__control--visible">Live</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-ios-desktop"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -287,12 +305,15 @@
                 <div class="gallery__item gallery__item--4">
                     <div class="gallery__overlay">
                         <div class="gallery__text">
-                            <span class="gallery__title">Burger Builder (projekt kursu z Udemy)</span>
+                            <span class="gallery__title">Burger Builder (Udemy course project)</span>
                             <span class="gallery__description">React, Redux, Firebase</span>
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--live" href="/burgerbuilder">
-                                Live
+                                <span class="gallery__control--visible">Live</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-ios-desktop"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -300,15 +321,21 @@
                 <div class="gallery__item gallery__item--5">
                     <div class="gallery__overlay">
                         <div class="gallery__text">
-                            <span class="gallery__title">Porfolio wersja 2</span>
+                            <span class="gallery__title">Porfolio version 2</span>
                             <span class="gallery__description">HTML, CSS, JS(jQuery), PHP</span>
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/Portfoliov2">
-                                See Code
+                                <span class="gallery__control--visible">See Code</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-logo-github"></i>
+                                </span>
                             </a>
                             <a class="gallery__control gallery__control--live" href="./">
-                                Live
+                                <span class="gallery__control--visible">Live</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-ios-desktop"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -321,10 +348,16 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/custom-datepicker">
-                                See Code
+                                <span class="gallery__control--visible">See Code</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-logo-github"></i>
+                                </span>
                             </a>
                             <a class="gallery__control gallery__control--live" href="/datepicker">
-                                Live
+                                <span class="gallery__control--visible">Live</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-ios-desktop"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -337,10 +370,16 @@
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/slideshow-jquery-gallery">
-                                See Code
+                                <span class="gallery__control--visible">See Code</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-logo-github"></i>
+                                </span>
                             </a>
                             <a class="gallery__control gallery__control--live" href="/slider1">
-                                Live
+                                <span class="gallery__control--visible">Live</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-ios-desktop"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -348,15 +387,21 @@
                 <div class="gallery__item">
                     <div class="gallery__overlay">
                         <div class="gallery__text">
-                            <span class="gallery__title">React Pomodoro Timer(wkrótce)</span>
+                            <span class="gallery__title">React Pomodoro Timer(soon)</span>
                             <span class="gallery__description">React, Firebase</span>
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="">
-                                See Code
+                                <span class="gallery__control--visible">See Code</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-logo-github"></i>
+                                </span>
                             </a>
                             <a class="gallery__control gallery__control--live" href="">
-                                Live
+                                <span class="gallery__control--visible">Live</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-ios-desktop"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -364,15 +409,21 @@
                 <div class="gallery__item">
                     <div class="gallery__overlay">
                         <div class="gallery__text">
-                            <span class="gallery__title">Kalkulator(wkrótce)</span>
+                            <span class="gallery__title">Calculator(soon)</span>
                             <span class="gallery__description">HTML, CSS, JS</span>
                         </div>
                         <div class="gallery__controls">
                             <a class="gallery__control gallery__control--github" target="_blank" href="https://github.com/Drawarnock/custom-datepicker">
-                                See Code
+                                <span class="gallery__control--visible">See Code</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-logo-github"></i>
+                                </span>
                             </a>
                             <a class="gallery__control gallery__control--live" href="">
-                                Live
+                                <span class="gallery__control--visible">Live</span>
+                                <span class="gallery__control--invisible">
+                                    <i class="icon ion-ios-desktop"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -386,8 +437,8 @@
             </svg>
             <h2 class="heading-2 heading-2--contact heading-2--light h-margin-bottom-big">Contact</h2>
             <div class="contact__container">
-                <span class="contact__info">Chciałbyś mnie o coś zapytać lub masz ofertę współpracy? Zapraszam do
-                    kontaktu!</span>
+                <span class="contact__info">Do you wanna ask me about something or maybe you have a cooperation offer?
+                    Do not hesistate. Feel free to send me a message!</span>
             </div>
             <form class="form" action="contact.php" method="post">
                 <div class="form__group">

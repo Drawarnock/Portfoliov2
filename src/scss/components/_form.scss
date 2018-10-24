@@ -8,7 +8,7 @@
     &__input, &__message {
         display: block;
         width: 100%;
-        padding: 15px;
+        padding: 18px;
         border: 1px solid transparent;
         background-color: #1E242C;
         outline: none;
@@ -44,7 +44,7 @@
         opacity: 0;
         visibility: hidden;
         font-size: 18px;
-        top: 15px;
+        top: 18px;
     }
 
     &__group {
@@ -52,14 +52,14 @@
         width: 95%;
         position: relative;
 
-        @include media(sm) {
-            width:500px;
+        @include media(md) {
+            width:600px;
         }
     }
 
     &__label {
         position: absolute;
-        left: 16px;
+        left: 19px;
         display: inline-block;
         color:#cdcdcd;
         font-size: 10px;
@@ -68,14 +68,14 @@
     }
 
     &__message {
-        height: 200px;
+        min-height: 250px;
         overflow: auto;
     }
 
     &__submit {
         width: 60%;
         display: block;
-        margin: 30px auto 10px;
+        margin: 60px auto 10px;
         border: 1px solid white;
         background-color: #1E242C;
         padding: 15px;
