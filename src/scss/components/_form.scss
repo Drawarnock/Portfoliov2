@@ -8,18 +8,16 @@
     &__input, &__message {
         display: block;
         width: 100%;
-        padding: 18px;
+        padding: 1.8rem;
         border: 1px solid transparent;
         background-color: #1E242C;
         outline: none;
         color:#cdcdcd;
-        font-size: 16px;
+        font-size: 1.6rem;
         border-radius: 3px;
         transition: all .4s ease-out;
 
-        @include media(sm) {
-            font-size: 18px;
-        }
+        @include media(sm) { font-size: 1.8rem; }
 
         &:hover {
             border: 1px solid #228078;
@@ -36,55 +34,54 @@
     &__input:placeholder-shown + &__label {
         opacity: 0;
         visibility: hidden;
-        font-size: 18px;
-        top: 15px;
+        font-size: 1.8rem;
+        top: 1.5rem;
     }
 
     &__message:placeholder-shown + &__label {
         opacity: 0;
         visibility: hidden;
-        font-size: 18px;
-        top: 18px;
+        font-size: 1.8rem;
+        top: 1.8rem;
     }
 
     &__group {
-        margin: 30px auto;
-        width: 95%;
+        margin: 3rem auto;
+        width: 90%;
         position: relative;
 
-        @include media(md) {
-            width:600px;
-        }
+        @include media(sm) { width:50rem; }
+        @include media(md) { width:60rem; }
     }
 
     &__label {
         position: absolute;
-        left: 19px;
+        left: 1.9rem;
         display: inline-block;
         color:#cdcdcd;
-        font-size: 10px;
+        font-size: 1rem;
         transition: all .3s ease;
-        top: 1px;
+        top: 2px;
     }
 
     &__message {
-        min-height: 250px;
+        min-height: 25rem;
         overflow: auto;
     }
 
     &__submit {
-        width: 60%;
+        width: 40%;
         display: block;
-        margin: 60px auto 10px;
+        margin: 6rem auto 1rem;
         border: 1px solid white;
         background-color: #1E242C;
-        padding: 15px;
-        font-size: 20px;
+        padding: 1.5rem;
+        font-size: 2rem;
         color:#cdcdcd;
         transition: all .3s ease-out;
         cursor: pointer;
 
-        @include media(sm) { width:200px; }
+        @include media(sm) { width:20rem; }
         
         &:hover {
             background-color: #228078;

@@ -13,26 +13,46 @@
         text-transform: uppercase;
         border-top: 2px solid rgba($light-grey, .8);
         border-bottom: 2px solid rgba($light-grey, .8);
-        padding: 6rem 4rem;
+        padding: 3rem 1rem;
+        opacity: 1;
+        transition: all .4s ease .5s;
+        @include media(md) { padding: 4rem 2rem; }
+        @include media(xmd) { padding: 6rem 4rem; }
+
         &--name {
             display: block;
-            font-size: 4.5rem;
+            font-size: 2.5rem;
             font-weight: 300;
+            @include media(xsm) { font-size: 3rem; }
+            @include media(sm) { font-size: 3.5rem; }
+            @include media(md) { font-size: 4rem; }
+            @include media(xmd) { font-size: 4.5rem; }
         }
 
         &--position {
             display: block;
             letter-spacing: 1px;
-            font-size: 5rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            @include media(xsm) { font-size: 3.5rem; }
+            @include media(sm) { font-size: 4rem; }
+            @include media(md) { font-size: 4.5rem; }
+            @include media(xmd) { font-size: 5rem; }
         }
 
         &--portfolio {
             display: block;
-            letter-spacing: 8px;
-            font-size: 8rem;
+            letter-spacing: 5px;
+            font-size: 4rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            @include media(xsm) { 
+                font-size: 5rem;
+                letter-spacing: 8px;
+            }
+            @include media(sm) { font-size: 6rem; }
+            @include media(md) { font-size: 7rem; }
+            @include media(xmd) { font-size: 8rem; }
         }
 
         &--light {
@@ -43,12 +63,15 @@
             font-weight: 700;
         }
     }
-
     &__logo {
         display: block;
         width: 12rem;
         height: auto;
-    } 
+    }
+
+    &--hidden {
+        opacity:0;
+    }
 }
 
 .heading-box  {
@@ -57,7 +80,7 @@
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 80rem;
     height: 65vh;
     padding: 3rem 4rem;
     display:flex;

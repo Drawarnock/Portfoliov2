@@ -10,8 +10,8 @@
     <title>Konrad Wisłocki - Front-End Developer</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/linea.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117958165-1"></script>
     <script>
@@ -37,16 +37,16 @@
                 <nav class="navigation__nav">
                     <ul class="navigation__list">
                         <li class="navigation__item">
-                            <a href="#about" class="navigation__link">About Me</a>
+                            <a href="#about" class="navigation__link linkForScroll">About Me</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#about" class="navigation__link">Skills</a>
+                            <a href="#skills" class="navigation__link linkForScroll">Skills</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#projects" class="navigation__link">Projects</a>
+                            <a href="#projects" class="navigation__link linkForScroll">Projects</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#contact" class="navigation__link">Contact</a>
+                            <a href="#contact" class="navigation__link linkForScroll">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -62,7 +62,7 @@
                     <span class="header__heading-1--light header__heading-1--name">Konrad Wisłocki</span>
                 </h1>
             </div>
-            <a class="double-arrow" href="#about">
+            <a class="double-arrow linkForScroll" href="#about">
                 <span class="double-arrow__container">
                     <span class="double-arrow__top">
                         <span class="double-arrow__left-half"></span>
@@ -108,7 +108,7 @@
                                 <i class="icon ion-ios-briefcase"></i>
                                 <span>Designation</span>
                             </span>
-                            <span class="panel__info">Front-end Developer / JS Developer</span>
+                            <span class="panel__info">Front-end Developer</span>
                         </div>
                         <div class="panel__item">
                             <span class="panel__title">
@@ -135,28 +135,13 @@
                 </div>
                 <div class="big-card__right-part">
                     <div class="big-card__desc">
-                        <h3 class="heading-3 h-margin-bottom-sm">Hi there,</h3>
+                        <h3 class="heading-3 heading-3--about h-margin-bottom-sm">Hi there,</h3>
                         <div class="big-card__text">
                             <p class="big-card__paragraph">
-                                Aktualnie mieszkam w Krakowie, gdzie poszukuję pracy jako junior
-                                Front-End developer. Posiadam tytuł inżyniera elektryka, jednak swoją przyszłośc
-                                postanowiłem związać z programowaniem. Pierwszą styczność z programowaniem miałem w
-                                liceum
-                                gdzie uczyłem się Turbopascala oraz C++. Popularną "webówką" interesuję się od
-                                niedawna. W
-                                listopadzie ubiegłego roku przystąpiłem do projektu unijnego, w którym odbyłem
-                                120-godzinne
-                                szkolenie z zakresu frontendu oraz 3-miesięczny staż. W mniejszym lub większym stopniu
-                                znam: HTML5, CSS3/SCSS, JS(ES6), jQuery, React, MySQL, Gulp, Bootstrap, PHP, GIT. W tym
-                                momencie najbardziej chcę się rozwijać w tworzeniu aplikacji w React.js, Node.js czy
-                                PHP.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac tincidunt sem, nec fringilla erat. In suscipit congue lectus ut venenatis. Sed blandit quis ipsum id eleifend. Donec in consequat ante. Curabitur lectus felis, pulvinar in fringilla vel, imperdiet sed arcu. Ut id efficitur felis. Maecenas dolor nisl, euismod et bibendum sed, ultrices ac nisl. Etiam tempor enim eget posuere blandit. Maecenas ullamcorper malesuada dolor, et varius justo maximus nec. Vivamus eleifend, risus non tempus rhoncus, nibh mi luctus tortor, luctus porta tortor quam eget justo.
                             </p>
                             <p class="big-card__paragraph">
-                                W
-                                niedługim czasie planuję naukę frameworka Laravel, React Native oraz poszerzać wiedzę w
-                                zakresie React.js, Node.js/Express.js. Staram się aby mój kod był czysty i naprostszy
-                                jak
-                                się da. Serdecznie zapraszam do kontaktu!
+                                Morbi commodo lectus lorem, eu semper erat lacinia sit amet. Fusce sed lobortis eros. Phasellus dolor nunc, fringilla at ipsum in, hendrerit luctus justo. Donec nec mattis arcu. Fusce accumsan venenatis mauris, ut pharetra turpis ultricies ac. Ut ultricies blandit nibh, nec pellentesque odio blandit quis.
                             </p>
                         </div>
                     </div>
@@ -221,7 +206,7 @@
                     <span class="feature-card__icon">
                         <i class="icon-basic-lightbulb"></i>
                     </span>
-                    <h4 class="feature-card__title h-margin-top-vsm">OPEN SOURCE & TOOLS</h4>
+                    <h4 class="feature-card__title h-margin-top-vsm">TOOLS</h4>
                     <div class="feature-card__text h-margin-top-vsm">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam non mauris facilisis mollis et eu dui. Etiam id faucibus turpis, eget elementum sapien. Curabitur ullamcorper sapien ac justo ornare scelerisque. Duis eleifend, mi ut egestas varius, tellus sem gravida nunc, sit amet dignissim lectus urna in ipsum. Etiam quis lacus quam
                     </div>
@@ -455,12 +440,13 @@
                 </div>
                 <input class="form__submit" name="submit_contact" type="submit" value="Submit">
             </form>
-            <div class="modal">
-                <div class="modal__messages"></div>
+            <div class="backdrop">
+                <div class="modal">
+                    <div class="modal__messages"></div>
+                </div>
             </div>
         </section>
         <footer class="footer">
-            
             <div class="socials">
                 <a href="https://www.linkedin.com/in/konrad-wislocki/" target="_blank" class="socials__icon socials__icon--in">
                     <i class="icon ion-logo-linkedin"></i>

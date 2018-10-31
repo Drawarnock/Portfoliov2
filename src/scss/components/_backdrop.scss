@@ -1,33 +1,16 @@
 .backdrop {
-    display: none;
+    visibility: hidden;
     position: fixed;
     top:0;
     left:0;
     right:0;
     bottom:0;
     background-color: rgba(0,0,0,0.8);
-    z-index: 1000;
+    z-index: 2000;
+    transition: all .5s ease;
+    opacity:0;
     &--active {
-        display: block;
-    }
-    &__img-container {
-        width:90%;
-        height: 50%;
-        margin: 20px auto;
-    }
-
-    &__img {
-        border: 1px solid white;
-        background-color: white;
-        display: block;
-        max-width: 50%;
-        padding: 20px;
-    }
-
-    &__desc {
-        width:80%;
-        height: 40%;
-        color: white;
-        margin: 20px auto;
+        visibility: visible;
+        opacity:1;
     }
 }

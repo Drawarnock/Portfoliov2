@@ -14,4 +14,7 @@
     @if($breakpoint == lg) {
         @media only screen and (min-width: $bp-lg) { @content }; 
     }
+    @if($breakpoint == xlg) {
+        @media only screen and (min-width: $bp-xlg) { @content }; 
+    }
 }

@@ -3,8 +3,8 @@ svg#bigTriangleColor {
 }
 
 #bigTriangleColor path {
-	fill: white;
-	stroke: white;
+	fill: $color-white;
+	stroke: $color-white;
 	stroke-width: 2;
 }
 
@@ -13,37 +13,46 @@ svg#bigTriangleColor {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     text-align: center;
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-weight: 700;
     transform: translateY(0);
     opacity:1;
-    transition: all .5s ease-in-out;
+    transition: all .8s ease-in-out;
     text-transform: uppercase;
     z-index: 2;
-
-    @include media(sm) { font-size: 60px; }
+    @include media(sm) { font-size: 5rem; }
+    @include media(md) { font-size: 6rem; }
 
     &--hidden {
         transform: translateY(-50%);
         opacity:0;
+
+        &::after {
+            transform: translateX(50%);
+        }
     }
     &--dark {
-        color: black;
+        color: $color-black;
     }
     &--light {
-        color: #cdcdcd;
+        color: $light-gray-2;
     }
 
     &::before {
         position: absolute;
-        color: rgba(188,188,188, .5);
+        display: block;
+        width: 100%;
+        color: rgba($dark-gray, .5);
         z-index: 1;
         font-weight: bold;
-        font-size: 12rem;
+        font-size: 8rem;
         z-index: -1;
         top: 50%;
         left: 50%;
         transform: translate(-50%,  -50%);
+        @include media(xsm) { font-size: 8.5rem; }
+        @include media(sm) { font-size: 10rem; }
+        @include media(md) { font-size: 12rem; }
     }
 
     &--about {
@@ -66,7 +75,7 @@ svg#bigTriangleColor {
 
     &--contact {
         &::before {
-            color: rgba(188,188,188, .1);
+            color: rgba($dark-gray, .1);
             content: 'CONTACT';
         }
     }
@@ -79,12 +88,12 @@ svg#bigTriangleColor {
         left: 50%;
         transform: translateX(-50%);
         top: 130%;
-        background-color: black;
+        background-color: $color-black;
     }
     
     &--contact {
         &::after {
-            background-color: #cdcdcd;
+            background-color: $light-gray-2;
         }
     }
 }
@@ -92,25 +101,41 @@ svg#bigTriangleColor {
 .heading-3 {
     font-size: 3rem;
     color: rgba($light-black, .9);
+    margin-left: auto;
+    margin-right: auto;
+
+    &--about {
+        border-top: 1px solid rgba($light-black, 0.2);
+        margin-top: 4rem;
+        width: 30rem;
+        padding: 1rem;
+        text-align: center;
+        @include media(xmd) {
+           padding: 0;
+           width: 100%;
+           margin-top: 0;
+           border-top: none;
+           text-align: left;
+        }
+    }
 }
 
 .skills {
-    background-color: white;
-    min-height: 1000px;
+    background-color: $color-white;
+    min-height: 100rem;
     padding: 10rem 5rem 5rem 5rem;
-
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    justify-content: center;
 }
 
 .projects {
     position: relative;
-    background-color: white;
-    padding: 6em 0 50px;
+    background-color: $color-white;
+    padding: 6rem 0 5rem;
     z-index: 1;
     
     &::before,&::after {
@@ -137,19 +162,19 @@ svg#bigTriangleColor {
 }
 
 .contact {
-    padding: 200px 10px 50px 10px;
-    background-color: #252934;
+    padding: 20rem 1rem 5rem 1rem;
+    background-color: $contact-bg;
     position: relative;
     &__container {
-        margin: 50px auto;
-        width: 95%;
+        margin: 5rem auto;
+        width: 90%;
         text-align: center;
         transition: all .5s ease-in-out;
         transform: translateY(0);
         opacity:1;
         margin-bottom: 6rem;
 
-        @include media(sm) { width:700px; }
+        @include media(md) { width:70rem; }
 
         &--hidden {
             transform: translateY(50%);
@@ -157,12 +182,11 @@ svg#bigTriangleColor {
         }
     }
     &__info {
-        color:#cdcdcd;
-        font-size: 16px;
+        color:$light-gray-2;
+        font-size: 1.6rem;
         line-height: 1.5em;
 
-        @include media(sm) { font-size: 20px; }
-        
+        @include media(sm) { font-size: 2rem; }
     }
     svg {
         position: absolute;

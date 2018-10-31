@@ -10,11 +10,19 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%; // 1rem - 10px
+    font-size: 50%; // 1rem - 10px
+
+    @include media(xmd) {
+        font-size: 62.5%; // 1rem - 10px
+    }
+
+    @include media(xlg) {
+        font-size: 87.5%; // 1rem - 14px
+    }
 }
 
 body {
-    background-color: rgba(#dedede, .4);
+    background-color: rgba($light-grey, .4);
 }
 
 .wrapper {
@@ -22,22 +30,18 @@ body {
     overflow-x: hidden;
 }
 
-/* width */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: #f1f1f1; 
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: rgba(#888, .5); 
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }

@@ -11,15 +11,15 @@
     
             if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 http_response_code(400);
-                
+                echo "<i class='ion-ios-close-circle-outline'></i>";
                 if(empty($name)) { 
-                    echo "<p class='contact__message'>Pole z imieniem i nazwiskiem jest puste!</p>";
+                    echo "<p class='modal__message'>Field with name is empty!</p>";
                 }
                 if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    echo "<p class='contact__message'>Niepoprawny format adresu e-mail!</p>";
+                    echo "<p class='modal__message'>Incorrect E-mail format!</p>";
                 }
                 if(empty($message)) { 
-                    echo "<p class='contact__message'>Pole z z wiadomością nie może być puste!</p>";
+                    echo "<p class='modal__message'>Field with message is empty!</p>";
                 }
                 exit;
             }
@@ -33,15 +33,16 @@
     
             if (mail($recipient, $subject, $email_content, $email_headers)) {
                 http_response_code(200);
-                echo "<i class='icon-ok-circled'></i><p class='contact__message'>Dziękuję! Twoja wiadomość została wysłana postaram się odpowiedzieć jak najszybciej :)</p>";
+                echo "<i class='ion-ios-checkmark-circle-outline'></i><p class='modal__message'>Thank you! 
+                 Your message has been successfully sent. I will try to reply as fast as I can.</p>";
             } else {
                 http_response_code(500);
-                echo "<i class='icon-cancel-circled'></i><p class='contact__message'>Coś poszło nie tak, twoja wiadomość nie została wysłana!</p>";
+                echo "<i class='ion-ios-close-circle-outline'></i><p class='modal__message'>Something went wrong! Your message hasn't been sent.</p>";
             }
     
         } else {
             http_response_code(403);
-            echo "<i class='icon-cancel-circled'></i><p class='contact__message'>Coś poszło nie tak, twoja wiadomość nie została wysłana!</p>";
+            echo "<i class='ion-ios-close-circle-outline'><p class='modal__message'>Something went wrong! Your message hasn't been sent.</p>";
         }
     }
        

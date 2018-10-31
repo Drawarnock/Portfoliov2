@@ -2,35 +2,47 @@
     border: 1px solid transparent;
     position: absolute;
     background-color: #1E242C;
-    z-index: 10;
-    border-radius: 5px;
+    border-radius: .5rem;
     opacity: 0;
-    border: 5px solid white;
-    display: none;
+    border: .3rem solid white;
+    visibility: hidden;
+    left: 50%;
+    top:50%;
+    width: 50vw;
+    height: 60vh;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+
+    @media only screen and (max-width: $bp-sm) and (orientation: portrait) {
+        width: 80vw;
+    }
+
     &--active {
-        display: flex;
-        justify-content: center;
-        align-items:Center;
-        animation: modalanim 6s ease-out 1 forwards;
+        animation: modalanim .5s ease-out 1 forwards;
     }
 
     &__messages {
         text-align: center;
-        padding: 20px;
-        
+        padding: 2rem;
+
+        i {
+            font-size: 4rem;
+        }
+       
         &--error {
-            color:red;
+            color:rgb(243, 62, 62);
         }
         &--success {
-            color:green;
+            color:rgb(13, 184, 13);
         }
     }
     
     &__message {
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: bold;
-        font-family: 'Open Sans', sans-serif;
-        padding: 15px;
+        padding: 1.5rem;
     }
 }
 
